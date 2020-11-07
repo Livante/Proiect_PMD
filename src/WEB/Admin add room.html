@@ -1,0 +1,96 @@
+<?php
+	include_once '../PHP/dbhr.inc.php';
+?>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/Proiect_PMD/src/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/Proiect_PMD/src/css/theme-hyperblue.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/Proiect_PMD/src/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+	</head>
+    <body>
+
+		<div class="nav-container">
+		</div>
+
+		<div class="main-container">
+		<section class="bg-primary">
+		        <div class="container">
+		            <div class="row mb48 mb-xs-24">
+		                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 text-center">
+
+		                    <h5 class="uppercase">ADD A ROOM:</h5>
+		                </div>
+		            </div>
+
+		            <div class="row mb40 mb-xs-24">
+		                <div class="col-sm-6 col-sm-offset-3">
+							<form action="../PHP/addroom.inc.php" method="POST">
+								<input type="text" name="roomId" class="mb0 transparent validate-require" placeholder="ROOM...">
+								<input type="text" name="badgeId"  required
+									   minlength="4" maxlength="4" size="10" class="mb0 transparent validate-require" placeholder="CODE...">
+		                        <button type="submit" name="submit" class="btn-white mb0">ADD ROOM</button>
+		                    </form>
+		                </div>
+		            </div>
+
+		            <div class="row">
+		                <div class="col-sm-12 text-center">
+		                    <p class="fade-half lead mb0"> </p>
+		                </div>
+		            </div>
+
+		        </div>
+
+		    </section><section>
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+
+		                    <div class="tabbed-content button-tabs">
+		                        <ul class="tabs">
+		                            <li class="active">
+		                                <div class="tab-title">
+		                                    <span>
+												<a href="http://localhost:63342/Proiect_PMD/WEB/Admin%20page.html?_ijt=5a3fhbq0jfp7kdh1e7hlhko4rn">
+												<font color="black">
+													Cancel
+												</font>
+											</a>
+											</span>
+		                                </div>
+
+		                            </li>
+
+
+		                            <li>
+
+		                                <div class="tab-content">
+		                                    <p>
+		                                        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+		                                    </p>
+		                                </div>
+		                            </li>
+		                        </ul>
+		                    </div>
+
+		                </div>
+		            </div>
+
+		        </div>
+
+		    </section></div>
+
+
+		<script src="/Proiect_PMD/src/js/jquery.min.js"></script>
+		<script src="/Proiect_PMD/src/js/bootstrap.min.js"></script>
+		<script src="/Proiect_PMD/src/js/parallax.js"></script>
+		<script src="/Proiect_PMD/src/js/scripts.js"></script>
+    </body>
+</html>
+				
