@@ -13,9 +13,16 @@ public class Operation {
 	
 	public List <Room> roomList= new ArrayList <Room>();
 	public List <Badge> badgeList= new ArrayList <Badge>();
-
+	private boolean accessFlag=false;
 	Keyboard scanner=new Keyboard();
 	
+	
+	
+	public boolean isAccessFlag() {
+		return accessFlag;
+	}
+
+
 	public void afis() {
 		System.out.println("badge:");
 		for (Badge iter : badgeList) {
@@ -29,18 +36,16 @@ public class Operation {
 	}
 	
 
-	public void doOperation() throws IOException, ClassNotFoundException, SQLException {
-			boolean accessFlag=false;	
+	public void doOperation(String badgeCode1) throws IOException, ClassNotFoundException, SQLException {
+				
 			boolean existingEmp=false;
-			
+	
 //			afis();
-			String badgeCode=scanner.readFromMyKeyboard("Enter the code!\n");
-			while(badgeCode.length()!=4) {
-				badgeCode=scanner.readFromMyKeyboard("Reenter the code!\n");
-			}
+			
 				
 			String function = "";
 			String badgeId="";
+			String badgeCode=""+badgeCode1;
 			for (Badge iterBadge : badgeList) {
 				if(iterBadge.getBadgeCode()==Integer.parseInt(badgeCode)) {
 					function=iterBadge.getFunction();
@@ -67,11 +72,15 @@ public class Operation {
 					}
 				}
 			
-				if(!accessFlag) {				
+				if(!accessFlag) {	
+					accessFlag=false;
 					System.err.println("ACCESS DENIED");
 				}	
 			}
-			else {System.err.println("NON EXISTENT EMPLOYEE");
+			else 
+			{
+				accessFlag=false;
+				System.err.println("NON EXISTENT EMPLOYEE");
 			}
 			FileWriter fw=new FileWriter("History_"+NUME_SALA+".html",true);
 			writeHTML(badgeCode,accessFlag,function,fw);

@@ -6,16 +6,72 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.*;
 
+import com.fazecast.jSerialComm.SerialPort;
+import com.fazecast.jSerialComm.SerialPortDataListener;
+import com.fazecast.jSerialComm.SerialPortEvent;
 
 public class Client {
 
+	static SerialPort comPort;
+    static String stringBuffer;
+	public static Operation opTry=new Operation();
+    
+	private static final class DataListener implements SerialPortDataListener
+	{
+		@Override
+		public int getListeningEvents() { return SerialPort.LISTENING_EVENT_DATA_AVAILABLE; }
+		
+		@Override
+		public void serialEvent(SerialPortEvent event)
+		{
+			if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
+				return;
+			byte[] newData = new byte[comPort.bytesAvailable()];
+			int numRead = comPort.readBytes(newData, newData.length);
+			stringBuffer = new String(newData,0,numRead);
+			System.out.println(stringBuffer);
+			try {
+				if(stringBuffer.length()==6) {
+					System.out.println(stringBuffer.substring(0, 4));
+					opTry.doOperation(stringBuffer.substring(0, 4));
+					boolean sendMsgBack=opTry.isAccessFlag();
+					byte[] buffer=new byte[1];
+					if(sendMsgBack==true) {
+						buffer[0]= 1;
+						System.out.println("GRANTED");
+						System.out.println("BUFFER: "+buffer);
+						comPort.writeBytes(buffer, 0, buffer.length);
+					}else {
+						buffer[0]=0;
+						System.out.println("DENIED");
+						System.out.println("BUFFER: "+buffer);
+						comPort.writeBytes(buffer, 0, buffer.length);
+					}
+					
+				}
+			} catch (ClassNotFoundException | IOException | SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+    
 	public static void main(String[] args) {
 			try
 			{
-				Operation op=new Operation();
+//				Operation op=new Operation();
+//				connectionForDatabases(op,"jdbc:mysql://localhost/badge");
+//				connectionForDatabases(op,"jdbc:mysql://localhost/room");
+
+				connectionForDatabases(opTry,"jdbc:mysql://localhost/badge");
+				connectionForDatabases(opTry,"jdbc:mysql://localhost/room");
 				
-				connectionForDatabases(op,"jdbc:mysql://localhost/badge");
-				connectionForDatabases(op,"jdbc:mysql://localhost/room");
+				comPort = SerialPort.getCommPorts()[0];
+		        comPort.openPort();
+		        System.out.println("COM port open: " + comPort.getDescriptivePortName());
+		        DataListener listener = new DataListener();
+		        comPort.addDataListener(listener);
+		        System.out.println("Event Listener open.");
+			
 			}catch(Exception e){
 				System.out.print("Do not connect to DB - Error:"+e);
 				try {
@@ -51,12 +107,7 @@ public class Client {
 					Statement st=conn.createStatement();
 					ResultSet rs=st.executeQuery("SELECT * FROM  room");
 					populateRoomList(op, rs);
-					conn.close();
-					
-							
-					while(true) {				
-						op.doOperation();
-					}
+					conn.close();	
 				}			
 	}
 
@@ -78,6 +129,7 @@ public class Client {
 	}
 	
 	public static void populateRoomList(Operation op, ResultSet rs) throws SQLException {
+		
 		String roomId;
 		String badgeId;
 		
