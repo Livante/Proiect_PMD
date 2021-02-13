@@ -25,31 +25,41 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 LiquidCrystal_I2C lcd(0x27, 16, 2); //LCD
 
-int incomingByte=0;
+byte incomingByte=0;
 
+// YALA
+int relay2=13;
+int javaRead=0;
 void setup(){
   Serial.begin(9600);
   pinMode(red_light_pin, OUTPUT);
   pinMode(green_light_pin, OUTPUT);
   pinMode(blue_light_pin, OUTPUT);
+  pinMode(relay2,OUTPUT);
   lcd.begin();
 
 	// Turn on the blacklight and print a message.
 	lcd.backlight();
   lcd.print("Enter a code:");
+  incomingByte= Serial.read();
 }
 
 void loop(){
   char key = keypad.getKey();
+  digitalWrite(relay2,HIGH);
   if(key){
     keyNum = convertToInt(key);
     
     password=password*10+keyNum;
 //    Serial.print("PASSWORD: ");
     Serial.println(password);
-    
-    if(password>999 && password<10000){
-      incomingByte= (int)Serial.read();
+    if(password>999 && password<10000 && javaRead==0){
+      incomingByte= Serial.read();
+      javaRead=javaRead+1;
+    }
+
+    if(password>999 && password<10000 && javaRead==1){
+      incomingByte= Serial.read();
       if(incomingByte==1){
         lcd.setCursor(0,1);
         lcd.print("****");
@@ -58,8 +68,10 @@ void loop(){
         lcd.backlight();
         lcd.setCursor(0,0);
 //        lcd.print("ACCESS GRANTED!");
+        digitalWrite(relay2,LOW);
         lcd.print(incomingByte);
-        delay(500);
+        delay(3000);
+        digitalWrite(relay2,HIGH);
         initNum();
       }
       else{
@@ -68,7 +80,7 @@ void loop(){
         lcd.backlight();
         lcd.setCursor(0,0);
 //        lcd.print("ACCESS DENIED!");
-lcd.print(incomingByte);
+        lcd.print(incomingByte);
         delay(500);
         initNum();  
       }
@@ -99,38 +111,6 @@ lcd.print(incomingByte);
       lcd.print("***");
       RGB_color(0,0,255);
     }
-  
-
-
-
-    // if(password>999 && password<10000){
-    //   lcd.setCursor(0,1);
-    //   lcd.print("****");
-    //   if(password==1111){
-    //     RGB_color(0,255,0);
-    //     lcd.begin();
-    //     lcd.backlight();
-    //     lcd.setCursor(0,0);
-    //     lcd.print("ACCESS GRANTED!");
-    //   }
-    //   else{
-    //     RGB_color(255,0,0);
-    //     lcd.begin();
-    //     lcd.backlight();
-    //     lcd.setCursor(0,0);
-    //     lcd.print("ACCESS DENIED!");  
-    // }
-    //   delay(500);
-    //   initNum();
-    // }else if(password>=10000){
-    //   RGB_color(255,0,0);
-    //   delay(500);
-    //   lcd.begin();
-    //   lcd.backlight();
-    //   lcd.setCursor(0,0);
-    //   lcd.print("ACCESS DENIED!");
-    //   initNum();
-    // }
   }
 }
   void RGB_color(int red_light_value, int green_light_value, int blue_light_value)

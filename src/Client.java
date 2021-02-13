@@ -32,20 +32,23 @@ public class Client {
 			System.out.println(stringBuffer);
 			try {
 				if(stringBuffer.length()==6) {
-					System.out.println(stringBuffer.substring(0, 4));
+					System.out.println("String buffer: "+stringBuffer.substring(0, 4));
 					opTry.doOperation(stringBuffer.substring(0, 4));
 					boolean sendMsgBack=opTry.isAccessFlag();
+					System.out.println(opTry.isAccessFlag());
 					byte[] buffer=new byte[1];
 					if(sendMsgBack==true) {
 						buffer[0]= 1;
 						System.out.println("GRANTED");
-						System.out.println("BUFFER: "+buffer);
-						comPort.writeBytes(buffer, 0, buffer.length);
+						System.out.println("BUFFER: "+buffer.length);
+						newData = new byte[comPort.bytesAvailable()];
+						comPort.writeBytes(buffer, buffer.length);	
 					}else {
-						buffer[0]=0;
+						buffer[0]=2;
 						System.out.println("DENIED");
-						System.out.println("BUFFER: "+buffer);
-						comPort.writeBytes(buffer, 0, buffer.length);
+						System.out.println("BUFFER: "+buffer.length);
+						newData = new byte[comPort.bytesAvailable()];
+						comPort.writeBytes(buffer, buffer.length);
 					}
 					
 				}

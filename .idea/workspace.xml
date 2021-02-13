@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="" />
+    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/BLUETOOTH/oc/oc.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCD_code/LCD_code.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCDyalaTAST/sketch_mar04b/sketch_mar04b.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/probaYala/LCD/LCD.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/sketch_apr03a.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/Functional/keypadAndLed/keypadAndLed.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/Functional/keypadAndLed/keypadAndLed.ino" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +35,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1WAr6WOOT2klCGcosUMfvhhvrSw" />
@@ -87,6 +100,7 @@
       <workItem from="1584549248677" duration="151000" />
       <workItem from="1584800669188" duration="46000" />
       <workItem from="1584909784757" duration="48000" />
+      <workItem from="1607009221637" duration="8000" />
     </task>
     <servers />
   </component>

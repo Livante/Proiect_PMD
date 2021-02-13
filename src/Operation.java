@@ -74,13 +74,13 @@ public class Operation {
 			
 				if(!accessFlag) {	
 					accessFlag=false;
-					System.err.println("ACCESS DENIED");
+					System.out.println("ACCESS DENIED");
 				}	
 			}
 			else 
 			{
 				accessFlag=false;
-				System.err.println("NON EXISTENT EMPLOYEE");
+				System.out.println("NON EXISTENT EMPLOYEE");
 			}
 			FileWriter fw=new FileWriter("History_"+NUME_SALA+".html",true);
 			writeHTML(badgeCode,accessFlag,function,fw);

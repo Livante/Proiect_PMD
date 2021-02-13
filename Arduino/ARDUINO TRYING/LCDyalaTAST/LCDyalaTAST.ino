@@ -1,33 +1,8 @@
-#include <Keypad.h>
-#include <LiquidCrystal.h> 
-//tastatura
-const byte ROWS = 4; //four rows
-const byte COLS = 3; //three columns
-char keys[ROWS][COLS] = {
-  {'1','2','3'},
-  {'4','5','6'},
-  {'7','8','9'},
-  {'*','0','#'}
-};
 
-byte rowPins[ROWS] = {5, 4, 3, 2}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {8, 7, 6}; //connect to the column pinouts of the keypad
-
-Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
-
-const byte passwordSize=4;
-int i=-1;
-char password[passwordSize]={0, 0, 0, 0};
 
 //Yala
 
 int relay2=13;
-
-//LCD
-int Contrast=150;
-LiquidCrystal lcd(22, 23, 24, 25, 26, 27);  
-
-
 
 void setup(){
   Serial.begin(9600);
