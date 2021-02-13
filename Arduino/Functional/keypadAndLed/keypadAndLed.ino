@@ -29,7 +29,7 @@ byte incomingByte=0;
 
 // YALA
 int relay2=13;
-int javaRead=0;
+
 void setup(){
   Serial.begin(9600);
   pinMode(red_light_pin, OUTPUT);
@@ -37,7 +37,6 @@ void setup(){
   pinMode(blue_light_pin, OUTPUT);
   pinMode(relay2,OUTPUT);
   lcd.begin();
-
 	// Turn on the blacklight and print a message.
 	lcd.backlight();
   lcd.print("Enter a code:");
@@ -50,15 +49,14 @@ void loop(){
   if(key){
     keyNum = convertToInt(key);
     
-    password=password*10+keyNum;
+    password=password*10+keyNum;    
 //    Serial.print("PASSWORD: ");
     Serial.println(password);
-    if(password>999 && password<10000 && javaRead==0){
-      incomingByte= Serial.read();
-      javaRead=javaRead+1;
-    }
-
-    if(password>999 && password<10000 && javaRead==1){
+    
+    if(password>999 && password<10000){
+//      while(Serial.read()==255){
+//        Serial.read();
+//      }
       incomingByte= Serial.read();
       if(incomingByte==1){
         lcd.setCursor(0,1);
@@ -94,9 +92,7 @@ void loop(){
        lcd.print("ACCESS DENIED!");
        initNum();
      }
-    
-
-    if(password<10){
+       if(password<10){
       lcd.setCursor(0,1); 
       lcd.print("*");
       RGB_color(125,125,125);

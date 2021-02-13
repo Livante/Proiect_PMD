@@ -29,7 +29,6 @@ public class Client {
 			byte[] newData = new byte[comPort.bytesAvailable()];
 			int numRead = comPort.readBytes(newData, newData.length);
 			stringBuffer = new String(newData,0,numRead);
-			System.out.println(stringBuffer);
 			try {
 				if(stringBuffer.length()==6) {
 					System.out.println("String buffer: "+stringBuffer.substring(0, 4));
