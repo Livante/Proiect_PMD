@@ -18,6 +18,10 @@ public class Client {
     
 	private static final class DataListener implements SerialPortDataListener
 	{
+		public void sendByteImmediately(byte b) throws Exception {
+			comPort.writeBytes(new byte[]{b}, 1);
+		}
+
 		@Override
 		public int getListeningEvents() { return SerialPort.LISTENING_EVENT_DATA_AVAILABLE; }
 		
@@ -36,23 +40,25 @@ public class Client {
 					opTry.doOperation(stringBuffer.substring(0, 4));
 					boolean sendMsgBack=opTry.isAccessFlag();
 					System.out.println(opTry.isAccessFlag());
-					byte[] buffer=new byte[1];
+					byte buffer;
 					if(sendMsgBack==true) {
-						buffer[0]= 1;
+						buffer= 1;
 						System.out.println("GRANTED");
-						System.out.println("BUFFER: "+buffer.length);
+						System.out.println("BUFFER: 1");
 						newData = new byte[comPort.bytesAvailable()];
-						comPort.writeBytes(buffer, buffer.length);	
+						sendByteImmediately(buffer);
 					}else {
-						buffer[0]=2;
+						buffer=2;
 						System.out.println("DENIED");
-						System.out.println("BUFFER: "+buffer.length);
+						System.out.println("BUFFER: 2");
 						newData = new byte[comPort.bytesAvailable()];
-						comPort.writeBytes(buffer, buffer.length);
+						sendByteImmediately(buffer);
 					}
 					
 				}
 			} catch (ClassNotFoundException | IOException | SQLException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/BLUETOOTH/oc/oc.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCD_code/LCD_code.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/LCDyalaTAST/sketch_mar04b/sketch_mar04b.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/probaYala/LCD/LCD.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/ARDUINO TRYING/sketch_apr03a.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/Functional/keypadAndLed/keypadAndLed.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/Functional/keypadAndLed/keypadAndLed.ino" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jSerialComm_2_6_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proiect_PMD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proiect_PMD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -43,20 +36,37 @@
   <component name="ProjectId" id="1WAr6WOOT2klCGcosUMfvhhvrSw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/xampp/php/php.exe" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jSerialComm-2.6.2.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\levente.gergelyfi\eclipse-workspace\Proiect_PMD\src\WEB" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
@@ -73,6 +83,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -101,48 +112,13 @@
       <workItem from="1584800669188" duration="46000" />
       <workItem from="1584909784757" duration="48000" />
       <workItem from="1607009221637" duration="8000" />
+      <workItem from="1613220069876" duration="1772000" />
+      <workItem from="1613820010792" duration="1633000" />
+      <workItem from="1613824907235" duration="969000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="526" y="40" key="#CLI_Interpreters" timestamp="1579119360895">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="526" y="40" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1579119360895" />
-    <state x="390" y="0" key="#PHP" timestamp="1579119505249">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="390" y="0" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1579119505249" />
-    <state x="275" y="23" key="#SQL_Dialects" timestamp="1579116323506">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="23" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1579116323506" />
-    <state x="274" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579692857363">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="274" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579692857363" />
-    <state x="451" y="195" key="#com.intellij.tools.ToolEditorDialog" timestamp="1579112526604">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="451" y="195" key="#com.intellij.tools.ToolEditorDialog/0.0.1366.728@0.0.1366.728" timestamp="1579112526604" />
-    <state x="373" y="213" key="FileChooserDialogImpl" timestamp="1579119355430">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="373" y="213" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579119355430" />
-    <state x="518" y="288" key="NewPhpFileDialog" timestamp="1579698207270">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="518" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1579698207270" />
-    <state x="321" y="15" key="SettingsEditor" timestamp="1579119364261">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="321" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579119364261" />
-    <state x="384" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579114301233">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="384" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579114301233" />
+    <option name="version" value="3" />
   </component>
 </project>
