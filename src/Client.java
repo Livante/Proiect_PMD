@@ -1,30 +1,26 @@
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import java.io.IOException;
-import java.sql.*;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 
+import java.io.IOException;
+import java.sql.*;
+
 public class Client {
-	
-	public static final String SALA_A1="A1";
-	public static final String SALA_A2="A2";
-	public static final String SALA_A3="A3";
-	public static final String SALA_A4="A4";
-	public static final String SALA_A5="A5";
-	public static final String SALA_A6="A6";
-	public static final String SALA_A7="A7";
-	public static final String SALA_A8="A8";
-	
-	static SerialPort comPort;
+
+    public static final String SALA_A1 = "A1";
+    public static final String SALA_A2 = "A2";
+    public static final String SALA_A3 = "A3";
+    public static final String SALA_A4 = "A4";
+    public static final String SALA_A5 = "A5";
+    public static final String SALA_A6 = "A6";
+    public static final String SALA_A7 = "A7";
+    public static final String SALA_A8 = "A8";
+
+    static SerialPort comPort;
     static String stringBuffer;
 	public static Operation opTry=new Operation();
     
-	private static final class DataListener implements SerialPortDataListener
-	{
+	private static final class DataListener implements SerialPortDataListener{
 		public void sendByteImmediately(byte b) throws Exception {
 			comPort.writeBytes(new byte[]{b}, 1);
 		}
@@ -33,8 +29,7 @@ public class Client {
 		public int getListeningEvents() { return SerialPort.LISTENING_EVENT_DATA_AVAILABLE; }
 		
 		@Override
-		public void serialEvent(SerialPortEvent event)
-		{
+		public void serialEvent(SerialPortEvent event){
 			if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
 				return;
 			byte[] newData = new byte[comPort.bytesAvailable()];
@@ -107,8 +102,7 @@ public class Client {
 	}
     
 	public static void main(String[] args) {
-			try
-			{
+			try{
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/badge");
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/room");
 				
@@ -143,9 +137,7 @@ public class Client {
 			conn.close();
 			}
 		
-		if(database.contains("room"))
-			
-				{
+		if(database.contains("room")){
 					Class.forName("com.mysql.jdbc.Driver");
 					Connection conn = null;
 					conn = DriverManager.getConnection(database,"root", "");

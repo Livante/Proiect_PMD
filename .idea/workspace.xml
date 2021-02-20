@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jSerialComm_2_6_2.xml" afterDir="false" />
+    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Trying sendByteImmediately">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proiect_PMD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proiect_PMD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arduino/arduinoTest/arduinoTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arduino/arduinoTest/arduinoTestA1.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,19 +54,6 @@
       <recent name="C:\Users\levente.gergelyfi\eclipse-workspace\Proiect_PMD\src\WEB" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
   </component>
@@ -114,11 +100,45 @@
       <workItem from="1607009221637" duration="8000" />
       <workItem from="1613220069876" duration="1772000" />
       <workItem from="1613820010792" duration="1633000" />
-      <workItem from="1613824907235" duration="969000" />
+      <workItem from="1613824907235" duration="1246000" />
+      <workItem from="1613826177648" duration="1272000" />
+      <workItem from="1613827985412" duration="977000" />
+      <workItem from="1613829500298" duration="889000" />
     </task>
+    <task id="LOCAL-00001" summary="Trying sendByteImmediately">
+      <created>1613826002822</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613826002822</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Trying sendByteImmediately">
+      <created>1613829535204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613829535204</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Trying sendByteImmediately" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying sendByteImmediately" />
   </component>
 </project>
