@@ -2,6 +2,8 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
 
+int salaA1=1;
+
 int red_light_pin = 11;
 int green_light_pin = 10;
 int blue_light_pin = 9;
@@ -42,6 +44,8 @@ void loop() {
 	char key = keypad.getKey();
 	digitalWrite(relay2, HIGH);
 	if (key) {
+                
+  
 		if (password > 999 && password < 10000) {
 			incomingByte = Serial.read();
 			if (incomingByte == 1) {
@@ -56,7 +60,6 @@ void loop() {
                         initNum();
 		}
 		setLedState();
-
                 keyNum = convertToInt(key);
 		password = password * 10 + keyNum;
 		Serial.println(password);		
@@ -83,8 +86,6 @@ int convertToInt(char key) {
 		return 10;
 	}
 	if (key == '#') {
-		password = 12121;
-		Serial.println(password);
 		initNum();
 		return 0;
 	}

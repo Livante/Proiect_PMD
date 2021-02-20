@@ -4,14 +4,21 @@ import java.sql.SQLException;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.*;
-
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 
 public class Client {
-
+	
+	public static final String SALA_A1="A1";
+	public static final String SALA_A2="A2";
+	public static final String SALA_A3="A3";
+	public static final String SALA_A4="A4";
+	public static final String SALA_A5="A5";
+	public static final String SALA_A6="A6";
+	public static final String SALA_A7="A7";
+	public static final String SALA_A8="A8";
+	
 	static SerialPort comPort;
     static String stringBuffer;
 	public static Operation opTry=new Operation();
@@ -34,10 +41,45 @@ public class Client {
 			int numRead = comPort.readBytes(newData, newData.length);
 			stringBuffer = new String(newData,0,numRead);
 			System.out.println(stringBuffer);
+			System.out.println(stringBuffer.length());
 			try {
 				if(stringBuffer.length()==6) {
-					System.out.println("String buffer: "+stringBuffer.substring(0, 4));
-					opTry.doOperation(stringBuffer.substring(0, 4));
+					System.out.println("String buffer: "+stringBuffer.substring(1, 5)+" Sala: "+stringBuffer.charAt(0));
+					switch(stringBuffer.charAt(0)) {
+					
+					case '1':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A1);
+						break;
+						
+					case '2':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A2);
+						break;
+						
+					case '3':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A3);
+						break;
+						
+					case '4':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A4);
+						break;
+						
+					case '5':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A5);
+						break;
+						
+					case '6':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A6);
+						break;
+						
+					case '7':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A7);
+						break;
+						
+					case '8':
+						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A8);
+						break;
+					}
+					
 					boolean sendMsgBack=opTry.isAccessFlag();
 					System.out.println(opTry.isAccessFlag());
 					byte buffer;
@@ -67,10 +109,6 @@ public class Client {
 	public static void main(String[] args) {
 			try
 			{
-//				Operation op=new Operation();
-//				connectionForDatabases(op,"jdbc:mysql://localhost/badge");
-//				connectionForDatabases(op,"jdbc:mysql://localhost/room");
-
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/badge");
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/room");
 				
