@@ -43,7 +43,7 @@ public class Client {
 			System.out.println(stringBuffer);
 			System.out.println(stringBuffer.length());
 			try {
-				if(stringBuffer.length()==6) {
+				if(stringBuffer.length()==7) {
 					System.out.println("String buffer: "+stringBuffer.substring(1, 5)+" Sala: "+stringBuffer.charAt(0));
 					switch(stringBuffer.charAt(0)) {
 					
