@@ -26,16 +26,23 @@ public class Client {
 		{
 			if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
 				return;
+			byte[] buffer=new byte[1];
 			byte[] newData = new byte[comPort.bytesAvailable()];
 			int numRead = comPort.readBytes(newData, newData.length);
 			stringBuffer = new String(newData,0,numRead);
+			
+			System.out.println(stringBuffer);
 			try {
-				if(stringBuffer.length()==6) {
+				if(numRead==12121) {
+					buffer[0]= 3;
+					newData = new byte[comPort.bytesAvailable()];
+					comPort.writeBytes(buffer, buffer.length);
+				}
+				else if(stringBuffer.length()==6) {
 					System.out.println("String buffer: "+stringBuffer.substring(0, 4));
 					opTry.doOperation(stringBuffer.substring(0, 4));
 					boolean sendMsgBack=opTry.isAccessFlag();
 					System.out.println(opTry.isAccessFlag());
-					byte[] buffer=new byte[1];
 					if(sendMsgBack==true) {
 						buffer[0]= 1;
 						System.out.println("GRANTED");

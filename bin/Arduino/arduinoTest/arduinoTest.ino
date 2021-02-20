@@ -57,31 +57,35 @@ void loop() {
 				initNum();
 				prevState = 2;
 			} else if (incomingByte == 3) {
+				lcd.setCursor(0, 0);
+				lcd.print("Hello");
+				lcd.setCursor(1, 1);
+				lcd.print(prevState);
+				delay(3000);
+				if (prevState == 1) {
+					lcd.setCursor(0, 1);
+					lcd.print("****");
+					RGB_color(0, 255, 0);
+					lcd.begin();
+					lcd.backlight();
+					lcd.setCursor(0, 0);
+					//        lcd.print("ACCESS GRANTED!");
+					digitalWrite(relay2, LOW);
+					lcd.print(incomingByte);
+					delay(3000);
+					digitalWrite(relay2, HIGH);
+				} else if (prevState == 2) {
+					RGB_color(255, 0, 0);
+					lcd.begin();
+					lcd.backlight();
+					lcd.setCursor(0, 0);
+					//        lcd.print("ACCESS DENIED!");
+					lcd.print(incomingByte);
+					delay(500);
+				}
+				delay(500);
 				initNum();
 			}
-
-			if (prevState == 1) {
-				lcd.setCursor(0, 1);
-				lcd.print("****");
-				RGB_color(0, 255, 0);
-				lcd.begin();
-				lcd.backlight();
-				lcd.setCursor(0, 0);
-				//        lcd.print("ACCESS GRANTED!");
-				digitalWrite(relay2, LOW);
-				lcd.print(incomingByte);
-				delay(3000);
-				digitalWrite(relay2, HIGH);
-			} else if (prevState == 2) {
-				RGB_color(255, 0, 0);
-				lcd.begin();
-				lcd.backlight();
-				lcd.setCursor(0, 0);
-				//        lcd.print("ACCESS DENIED!");
-				lcd.print(incomingByte);
-				delay(500);
-			}
-
 		} else if (password >= 10000) {
 			RGB_color(255, 0, 0);
 			delay(500);
@@ -91,19 +95,7 @@ void loop() {
 			lcd.print("ACCESS DENIED!");
 			initNum();
 		}
-		if (password < 10) {
-			lcd.setCursor(0, 1);
-			lcd.print("*");
-			RGB_color(125, 125, 125);
-		} else if (password < 100) {
-			lcd.setCursor(0, 1);
-			lcd.print("**");
-			RGB_color(0, 125, 125);
-		} else if (password < 1000) {
-			lcd.setCursor(0, 1);
-			lcd.print("***");
-			RGB_color(0, 0, 255);
-		}
+		checkNumRange();
 	}
 }
 void RGB_color(int red_light_value, int green_light_value,
@@ -134,3 +126,22 @@ int convertToInt(char key) {
 	}
 	return char(key) - 48;
 }
+
+void checkNumRange() {
+	if (password < 10) {
+		lcd.setCursor(0, 1);
+		lcd.print("*");
+		RGB_color(125, 125, 125);
+	} else if (password < 100) {
+		lcd.setCursor(0, 1);
+		lcd.print("**");
+		RGB_color(0, 125, 125);
+	} else if (password < 1000) {
+		lcd.setCursor(0, 1);
+		lcd.print("***");
+		RGB_color(0, 0, 255);
+	}
+}
+
+
+

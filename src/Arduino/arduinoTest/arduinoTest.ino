@@ -134,3 +134,4 @@ int convertToInt(char key) {
 	}
 	return char(key) - 48;
 }
+
