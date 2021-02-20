@@ -16,7 +16,7 @@ char keys[ROWS][COLS] = { { '1', '2', '3' }, { '4', '5', '6' },
 byte rowPins[ROWS] = { 22, 23, 24, 25 }; //connect to the row pinouts of the keypad
 byte colPins[COLS] = { 26, 27, 28 }; //connect to the column pinouts of the keypad
 
-long password = 0;
+long password = NUMAR_SALA;
 int keyNum;
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
