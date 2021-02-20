@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
 
-#define NUMAR_SALA 1
+#define NUMAR_SALA 2
 
 int red_light_pin = 11;
 int green_light_pin = 10;
@@ -17,6 +17,7 @@ byte rowPins[ROWS] = { 22, 23, 24, 25 }; //connect to the row pinouts of the key
 byte colPins[COLS] = { 26, 27, 28 }; //connect to the column pinouts of the keypad
 
 long password = NUMAR_SALA;
+
 int keyNum;
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
@@ -86,7 +87,7 @@ int convertToInt(char key) {
 	}
 	if (key == '#') {
 		initNum();
-		return 0;
+		return 1;
 	}
 	return char(key) - 48;
 }
@@ -140,3 +141,4 @@ void controlYala(int grantedOrDenied){
 		initNum();
 	}
 }
+

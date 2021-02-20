@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
 
-int salaA1=1;
+#define NUMAR_SALA 2
 
 int red_light_pin = 11;
 int green_light_pin = 10;
@@ -16,7 +16,8 @@ char keys[ROWS][COLS] = { { '1', '2', '3' }, { '4', '5', '6' },
 byte rowPins[ROWS] = { 22, 23, 24, 25 }; //connect to the row pinouts of the keypad
 byte colPins[COLS] = { 26, 27, 28 }; //connect to the column pinouts of the keypad
 
-int password = 0;
+long password = NUMAR_SALA;
+
 int keyNum;
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
@@ -44,9 +45,7 @@ void loop() {
 	char key = keypad.getKey();
 	digitalWrite(relay2, HIGH);
 	if (key) {
-                
-  
-		if (password > 999 && password < 10000) {
+		if (password > 9999 && password < 100000) {
 			incomingByte = Serial.read();
 			if (incomingByte == 1) {
                                 controlYala(1);
@@ -55,12 +54,13 @@ void loop() {
 				controlYala(2);
                                 initNum();
   			} 
-		} else if (password >= 10000) {
+		} else if (password >= 100000) {
 			controlYala(3);
                         initNum();
 		}
 		setLedState();
                 keyNum = convertToInt(key);
+         if(key!='#')
 		password = password * 10 + keyNum;
 		Serial.println(password);		
 	}
@@ -73,7 +73,7 @@ void RGB_color(int red_light_value, int green_light_value,
 }
 
 void initNum() {
-	password = 0;
+	password = NUMAR_SALA;
 	lcd.begin();
 	lcd.backlight();
 	lcd.setCursor(0, 0);
@@ -87,21 +87,21 @@ int convertToInt(char key) {
 	}
 	if (key == '#') {
 		initNum();
-		return 0;
+		return 1;
 	}
 	return char(key) - 48;
 }
 
 void setLedState(){
-	if (password < 10) {
+	if (password < 100) {
 		lcd.setCursor(0, 1);
 		lcd.print("*");
 		RGB_color(125, 125, 125);
-	} else if (password < 100) {
+	} else if (password < 1000) {
 		lcd.setCursor(0, 1);
 		lcd.print("**");
 		RGB_color(0, 125, 125);
-	} else if (password < 1000) {
+	} else if (password < 10000) {
 		lcd.setCursor(0, 1);
 		lcd.print("***");
 		RGB_color(0, 0, 255);
@@ -141,3 +141,4 @@ void controlYala(int grantedOrDenied){
 		initNum();
 	}
 }
+
