@@ -2,6 +2,8 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
 
+int salaA1=1;
+
 int red_light_pin = 11;
 int green_light_pin = 10;
 int blue_light_pin = 9;
@@ -16,7 +18,6 @@ byte colPins[COLS] = { 26, 27, 28 }; //connect to the column pinouts of the keyp
 
 int password = 0;
 int keyNum;
-byte prevState = 0;
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 LiquidCrystal_I2C lcd(0x27, 16, 2); //LCD
@@ -43,32 +44,25 @@ void loop() {
 	char key = keypad.getKey();
 	digitalWrite(relay2, HIGH);
 	if (key) {
-		keyNum = convertToInt(key);
-		password = password * 10 + keyNum;
-		Serial.println(password);
-
+                
+  
 		if (password > 999 && password < 10000) {
 			incomingByte = Serial.read();
 			if (incomingByte == 1) {
+                                controlYala(1);
 				initNum();
-				prevState = 1;
 			} else if (incomingByte == 2) {
-				initNum();
-				prevState = 2;
-			} else if (incomingByte == 3) {
-				initNum();
-			}
-
-			if (prevState == 1) {
-				controlYala(1);
-			} else if (prevState == 2) {
 				controlYala(2);
-			}
-
+                                initNum();
+  			} 
 		} else if (password >= 10000) {
 			controlYala(3);
+                        initNum();
 		}
 		setLedState();
+                keyNum = convertToInt(key);
+		password = password * 10 + keyNum;
+		Serial.println(password);		
 	}
 }
 void RGB_color(int red_light_value, int green_light_value,
@@ -92,8 +86,6 @@ int convertToInt(char key) {
 		return 10;
 	}
 	if (key == '#') {
-		password = 12121;
-		Serial.println(password);
 		initNum();
 		return 0;
 	}

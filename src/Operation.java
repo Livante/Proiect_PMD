@@ -9,7 +9,7 @@ public class Operation {
 	
 //	public static final String ADMIN="123456";
 //	public static final String HISTORY="654321";
-	public static final String NUME_SALA="A1";
+	
 	
 	public List <Room> roomList= new ArrayList <Room>();
 	public List <Badge> badgeList= new ArrayList <Badge>();
@@ -36,7 +36,7 @@ public class Operation {
 	}
 	
 
-	public void doOperation(String badgeCode1) throws IOException, ClassNotFoundException, SQLException {
+	public void doOperation(String badgeCode1, String sala) throws IOException, ClassNotFoundException, SQLException {
 				
 			boolean existingEmp=false;
 	
@@ -59,7 +59,7 @@ public class Operation {
 				int badgeIdNum=Integer.parseInt(badgeId);
 				
 				for (Room iterRoom : roomList) {
-					if(NUME_SALA.equals(iterRoom.getRoomId())) {
+					if(Client.SALA_A1.equals(iterRoom.getRoomId())) {
 						badgeIdFromRoom=Integer.parseInt(iterRoom.getBadgeId());
 						if((badgeIdFromRoom & badgeIdNum)>0) {
 							System.out.println(badgeIdFromRoom );
@@ -82,7 +82,7 @@ public class Operation {
 				accessFlag=false;
 				System.out.println("NON EXISTENT EMPLOYEE");
 			}
-			FileWriter fw=new FileWriter("History_"+NUME_SALA+".html",true);
+			FileWriter fw=new FileWriter("History_"+Client.SALA_A1+".html",true);
 			writeHTML(badgeCode,accessFlag,function,fw);
 			fw.close();
 			}
