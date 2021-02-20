@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Trying sendByteImmediately">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arduino/arduinoTest/arduinoTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arduino/arduinoTest/arduinoTestA1.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +103,7 @@
       <workItem from="1613824907235" duration="1246000" />
       <workItem from="1613826177648" duration="1272000" />
       <workItem from="1613827985412" duration="977000" />
+      <workItem from="1613829500298" duration="889000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613826002822</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Trying sendByteImmediately">
+      <created>1613829535204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613829535204</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
