@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
 
-#define NUMAR_SALA 1
+#define NUMAR_SALA 2
 
 int red_light_pin = 11;
 int green_light_pin = 10;
@@ -17,6 +17,7 @@ byte rowPins[ROWS] = { 22, 23, 24, 25 }; //connect to the row pinouts of the key
 byte colPins[COLS] = { 26, 27, 28 }; //connect to the column pinouts of the keypad
 
 long password = NUMAR_SALA;
+
 int keyNum;
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
@@ -44,8 +45,6 @@ void loop() {
 	char key = keypad.getKey();
 	digitalWrite(relay2, HIGH);
 	if (key) {
-                
-  
 		if (password > 9999 && password < 100000) {
 			incomingByte = Serial.read();
 			if (incomingByte == 1) {
@@ -61,6 +60,7 @@ void loop() {
 		}
 		setLedState();
                 keyNum = convertToInt(key);
+         if(key!='#')
 		password = password * 10 + keyNum;
 		Serial.println(password);		
 	}

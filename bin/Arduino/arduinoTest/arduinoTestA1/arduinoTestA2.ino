@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
 
-#define NUMAR_SALA 1
+#define NUMAR_SALA 2
 
 int red_light_pin = 11;
 int green_light_pin = 10;
@@ -16,11 +16,8 @@ char keys[ROWS][COLS] = { { '1', '2', '3' }, { '4', '5', '6' },
 byte rowPins[ROWS] = { 22, 23, 24, 25 }; //connect to the row pinouts of the keypad
 byte colPins[COLS] = { 26, 27, 28 }; //connect to the column pinouts of the keypad
 
-<<<<<<< HEAD:src/Arduino/arduinoTest/arduinoTest.ino
 long password = NUMAR_SALA;
-=======
-long password = 0;
->>>>>>> 690c5162248467430ce8cbf4463cacd05964f4a3:src/Arduino/arduinoTest/arduinoTestA1.ino
+
 int keyNum;
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
@@ -48,11 +45,6 @@ void loop() {
 	char key = keypad.getKey();
 	digitalWrite(relay2, HIGH);
 	if (key) {
-<<<<<<< HEAD:src/Arduino/arduinoTest/arduinoTest.ino
-                
-  
-=======
->>>>>>> 690c5162248467430ce8cbf4463cacd05964f4a3:src/Arduino/arduinoTest/arduinoTestA1.ino
 		if (password > 9999 && password < 100000) {
 			incomingByte = Serial.read();
 			if (incomingByte == 1) {

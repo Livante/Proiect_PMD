@@ -39,7 +39,7 @@ public class Operation {
 	public void doOperation(String badgeCode1, String sala) throws IOException, ClassNotFoundException, SQLException {
 				
 			boolean existingEmp=false;
-	
+			accessFlag=false;
 //			afis();
 			
 				
@@ -59,7 +59,7 @@ public class Operation {
 				int badgeIdNum=Integer.parseInt(badgeId);
 				
 				for (Room iterRoom : roomList) {
-					if(Client.SALA_A1.equals(iterRoom.getRoomId())) {
+					if(sala.equals(iterRoom.getRoomId())) {
 						badgeIdFromRoom=Integer.parseInt(iterRoom.getBadgeId());
 						if((badgeIdFromRoom & badgeIdNum)>0) {
 							System.out.println(badgeIdFromRoom );
@@ -82,7 +82,7 @@ public class Operation {
 				accessFlag=false;
 				System.out.println("NON EXISTENT EMPLOYEE");
 			}
-			FileWriter fw=new FileWriter("History_"+Client.SALA_A1+".html",true);
+			FileWriter fw=new FileWriter("History_"+sala+".html",true);
 			writeHTML(badgeCode,accessFlag,function,fw);
 			fw.close();
 			}
