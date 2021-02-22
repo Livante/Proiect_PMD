@@ -14,9 +14,6 @@ public class Operation {
 	public List <Room> roomList= new ArrayList <Room>();
 	public List <Badge> badgeList= new ArrayList <Badge>();
 	private boolean accessFlag=false;
-	Keyboard scanner=new Keyboard();
-	
-	
 	
 	public boolean isAccessFlag() {
 		return accessFlag;
