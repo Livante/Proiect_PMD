@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Preparing to connect 2 relays">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arduino/arduinoTest/arduinoTestA1.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arduino/arduinoTest/arduinoTestA1.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/add.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/add.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/Admin add employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin add employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/Admin add room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin add room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/Admin remove employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin remove employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/Admin remove room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin remove room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/manager-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/manager-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/password-db.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-db.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/password-hist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-hist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +52,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jSerialComm-2.6.2.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
@@ -52,6 +60,20 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\levente.gergelyfi\eclipse-workspace\Proiect_PMD\src\WEB" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="Proiect_PMD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
@@ -103,7 +125,19 @@
       <workItem from="1613826177648" duration="1272000" />
       <workItem from="1613827985412" duration="977000" />
       <workItem from="1613829500298" duration="1796000" />
-      <workItem from="1613831371265" duration="605000" />
+      <workItem from="1613831371265" duration="683000" />
+      <workItem from="1613832232758" duration="2000" />
+      <workItem from="1614441919222" duration="215000" />
+      <workItem from="1614442573977" duration="1797000" />
+      <workItem from="1614444386637" duration="174000" />
+      <workItem from="1614444576817" duration="442000" />
+      <workItem from="1614445027735" duration="1138000" />
+      <workItem from="1614446403124" duration="661000" />
+      <workItem from="1614447078927" duration="908000" />
+      <workItem from="1614447999998" duration="384000" />
+      <workItem from="1614448396006" duration="260000" />
+      <workItem from="1614448668835" duration="1814000" />
+      <workItem from="1614450714975" duration="1361000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -126,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613830420289</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Preparing to connect 2 relays">
+      <created>1613832109031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613832109031</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
