@@ -4,9 +4,13 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Client {
 
+	public final static int MAX_PORTS = 2;
+	
     public static final String SALA_A1 = "A1";
     public static final String SALA_A2 = "A2";
     public static final String SALA_A3 = "A3";
@@ -16,13 +20,17 @@ public class Client {
     public static final String SALA_A7 = "A7";
     public static final String SALA_A8 = "A8";
 
-    static SerialPort comPort;
+    static SerialPort availablePort[] = new SerialPort[MAX_PORTS];
+    static List<DataListener> listenerList = new ArrayList<DataListener>();
+    
     static String stringBuffer;
 	public static Operation opTry=new Operation();
     
 	private static final class DataListener implements SerialPortDataListener{
+		
 		public void sendByteImmediately(byte b) throws Exception {
-			comPort.writeBytes(new byte[]{b}, 1);
+			int i=listenerList.indexOf(this);
+			availablePort[i].writeBytes(new byte[]{b}, 1);
 		}
 
 		@Override
@@ -30,10 +38,14 @@ public class Client {
 		
 		@Override
 		public void serialEvent(SerialPortEvent event){
+		
+			int i=listenerList.indexOf(this);
+		
 			if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
 				return;
-			byte[] newData = new byte[comPort.bytesAvailable()];
-			int numRead = comPort.readBytes(newData, newData.length);
+			
+			byte[] newData = new byte[availablePort[i].bytesAvailable()];
+			int numRead = availablePort[i].readBytes(newData, newData.length);
 			stringBuffer = new String(newData,0,numRead);
 			System.out.println(stringBuffer);
 			System.out.println(stringBuffer.length());
@@ -82,13 +94,13 @@ public class Client {
 						buffer= 1;
 						System.out.println("GRANTED");
 						System.out.println("BUFFER: 1");
-						newData = new byte[comPort.bytesAvailable()];
+						newData = new byte[availablePort[i].bytesAvailable()];
 						sendByteImmediately(buffer);
 					}else {
 						buffer=2;
 						System.out.println("DENIED");
 						System.out.println("BUFFER: 2");
-						newData = new byte[comPort.bytesAvailable()];
+						newData = new byte[availablePort[i].bytesAvailable()];
 						sendByteImmediately(buffer);
 					}
 					
@@ -105,14 +117,16 @@ public class Client {
 			try{
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/badge");
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/room");
-				
-				comPort = SerialPort.getCommPorts()[0];
-		        comPort.openPort();
-		        System.out.println("COM port open: " + comPort.getDescriptivePortName());
-		        DataListener listener = new DataListener();
-		        comPort.addDataListener(listener);
-		        System.out.println("Event Listener open.");
-			
+				  
+				for(int portIndex=0; portIndex<MAX_PORTS; portIndex++) {
+					availablePort[portIndex]=SerialPort.getCommPorts()[portIndex];	
+					availablePort[portIndex].openPort();
+			        System.out.println("COM port open: " + availablePort[portIndex].getDescriptivePortName());
+			        listenerList.add(new DataListener());
+			        availablePort[portIndex].addDataListener(listenerList.get(portIndex));
+			        System.out.println("Event Listener open.");
+				}
+							
 			}catch(Exception e){
 				System.out.print("Do not connect to DB - Error:"+e);
 				try {
