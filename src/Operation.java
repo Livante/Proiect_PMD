@@ -13,32 +13,17 @@ public class Operation {
 	
 	public List <Room> roomList= new ArrayList <Room>();
 	public List <Badge> badgeList= new ArrayList <Badge>();
+	public List <History> historyList= new ArrayList <History>();
 	private boolean accessFlag=false;
 	
 	public boolean isAccessFlag() {
 		return accessFlag;
 	}
 
-
-	public void afis() {
-		System.out.println("badge:");
-		for (Badge iter : badgeList) {
-			System.out.println(iter.getBadgeCode()+" "+iter.getBadgeId()+" "+iter.getFunction());
-		}
-		System.out.println("room:");
-		for (Room iter : roomList) {
-			System.out.println(iter.getBadgeId()+" "+iter.getRoomId());
-		}
-	
-	}
-	
-
 	public void doOperation(String badgeCode1, String sala) throws IOException, ClassNotFoundException, SQLException {
 				
 			boolean existingEmp=false;
 			accessFlag=false;
-//			afis();
-			
 				
 			String function = "";
 			String badgeId="";

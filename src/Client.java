@@ -20,6 +20,10 @@ public class Client {
     public static final String SALA_A7 = "A7";
     public static final String SALA_A8 = "A8";
 
+    public static final String NON_EXISTENT_EMPLOYEE = "Non existent employee";
+    public static final String ACCESS_GRANTED = "Access Granted";
+    public static final String ACCESS_DENIED = "Access Denied";
+    
     static SerialPort availablePort[] = new SerialPort[MAX_PORTS];
     static List<DataListener> listenerList = new ArrayList<DataListener>();
     
@@ -117,7 +121,8 @@ public class Client {
 			try{
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/badge");
 				connectionForDatabases(opTry,"jdbc:mysql://localhost/room");
-				  
+				connectionForDatabases(opTry,"jdbc:mysql://localhost/history");
+				
 				for(int portIndex=0; portIndex<MAX_PORTS; portIndex++) {
 					availablePort[portIndex]=SerialPort.getCommPorts()[portIndex];	
 					availablePort[portIndex].openPort();
@@ -161,7 +166,20 @@ public class Client {
 					ResultSet rs=st.executeQuery("SELECT * FROM  room");
 					populateRoomList(op, rs);
 					conn.close();	
-				}			
+		}
+		
+		if(database.contains("history")){
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = null;
+			conn = DriverManager.getConnection(database,"root", "");
+			System.out.println();
+			System.out.println("Database is connected !");
+			Statement st=conn.createStatement();
+			ResultSet rs=st.executeQuery("SELECT * FROM  history");
+			populateRoomList(op, rs);
+			conn.close();	
+}
+		
 	}
 
 	public static void populateBadgeList(Operation op, ResultSet rs) throws SQLException {
@@ -192,6 +210,26 @@ public class Client {
 			
 			Room roomObject = new Room(roomId,badgeId);		
 			op.roomList.add(roomObject);			
+		}
+	}
+	
+public static void populateHistoryList(Operation op, ResultSet rs) throws SQLException {
+			
+		String roomId; 
+		String function;
+		int badgeCode;
+		Date accessDate; 
+		String verdict;	
+		
+		while(rs.next()) {
+			roomId = rs.getString(2);
+			function =rs.getString(3);
+			badgeCode = rs.getInt(4);
+			accessDate =rs.getDate(5);
+			verdict =rs.getString(6);
+			
+			History historyObject = new History(roomId, function, badgeCode, accessDate, verdict);		
+			op.historyList.add(historyObject);			
 		}
 	}
 }

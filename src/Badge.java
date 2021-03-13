@@ -29,8 +29,4 @@ public class Badge {
 	public void setBadgeCode(int badgeCode) {
 		this.badgeCode = badgeCode;
 	}
-	
-	
-	
-	
 }
