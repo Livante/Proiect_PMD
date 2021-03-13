@@ -25,7 +25,7 @@
             <div class="row mb48 mb-xs-24">
                 <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 text-center">
 
-                    <h5 class="uppercase">SELECT A ROOM TO VIEW THE HISTORY:</h5>
+                    <h5 class="uppercase">SELECT THE DESIRED ROOM HISTORY FILTERS:</h5>
                 </div>
             </div>
 
@@ -34,9 +34,22 @@
                     <form action="../PHP/history.inc.php" method="POST" target="_blank">
                         <input type="text" name="hist" required
                                minlength="2" maxlength="4" size="10" target="_blank"
-                               class="mb0 transparent validate-require" placeholder="CODE...">
-                        <button type="submit" class="btn-white mb0" target="_blank">Proceed</button>
+                               class="mb0 transparent validate-require" placeholder="ROOM CODE...">
+                        <input type="text" name="function" class="mb0 transparent validate-require"
+                               placeholder="EMPLOYEE JOB...">
+                        <input type="text" name="badgeCode" required
+                               minlength="4" maxlength="4" size="10" class="mb0 transparent validate-require"
+                               placeholder="EMPLOYEE CODE...">
+                        <input type="text" name="accessDate" class="mb0 transparent validate-require"
+                               placeholder="ACCESS DATE...">
+                        <select name="verdict" id="verdict" class="mb0 transparent validate-require">
+                            <option value=" "></option>
+                            <option value="Non existent employee">Non existent employee</option>
+                            <option value="Access Granted">Access Granted</option>
+                            <option value="Access Denied">Access Denied</option>
+                        </select>
 
+                        <button type="submit" class="btn-white mb0" target="_blank">Proceed</button>
                     </form>
                 </div>
             </div>
@@ -86,6 +99,21 @@
 <script src="/Proiect_PMD/src/js/bootstrap.min.js"></script>
 <script src="/Proiect_PMD/src/js/parallax.js"></script>
 <script src="/Proiect_PMD/src/js/scripts.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+
+<script>
+    $(function () {
+        $('input[name="accessDate"]').daterangepicker({
+            opens: 'left'
+        }, function (start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+    });
+</script>
 </body>
 </html>
 				

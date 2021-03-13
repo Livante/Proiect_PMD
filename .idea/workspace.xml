@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/WEB/Main menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/bin/WEB/Main menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Badge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Badge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/manager-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/manager-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +63,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client" />
+      <option name="MAIN_CLASS_NAME" value="java.Client" />
       <module name="Proiect_PMD" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,7 +139,10 @@
       <workItem from="1614448668835" duration="1814000" />
       <workItem from="1614450714975" duration="1608000" />
       <workItem from="1615294840689" duration="1220000" />
-      <workItem from="1615632985543" duration="551000" />
+      <workItem from="1615632985543" duration="1790000" />
+      <workItem from="1615634790600" duration="1539000" />
+      <workItem from="1615636582773" duration="1848000" />
+      <workItem from="1615638448165" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -174,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615633424252</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
+      <created>1615633558733</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615633558733</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

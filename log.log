@@ -6,9 +6,9 @@ Date:   Sat Feb 27 19:20:19 2021 +0200
 
  History_A1.html               |  10 +++++++++-
  History_A2.html               |  10 +++++++++-
- bin/Client$DataListener.class | Bin 2920 -> 3103 bytes
- bin/Client.class              | Bin 4506 -> 4828 bytes
- src/Client.java               |  42 ++++++++++++++++++++++++++++--------------
+ bin/java.Client$DataListener.class | Bin 2920 -> 3103 bytes
+ bin/java.Client.class              | Bin 4506 -> 4828 bytes
+ src/java.Client.java               |  42 ++++++++++++++++++++++++++++--------------
  5 files changed, 46 insertions(+), 16 deletions(-)
 
 commit ba798a913b59c7cd32a4b0dcd8a32c391e372f29
@@ -20,11 +20,11 @@ Date:   Mon Feb 22 20:45:59 2021 +0200
  History_A1.html                                    |  14 ++
  History_A2.html                                    |  50 +++++++
  bin/Keyboard.class                                 | Bin 769 -> 0 bytes
- bin/Operation.class                                | Bin 3870 -> 3795 bytes
+ bin/java.Operation.class                                | Bin 3870 -> 3795 bytes
  .../arduinoTest/arduinoTestA1/arduinoTestA2.ino    | 144 ---------------------
  .../arduinoTest/arduinoTestA2}/arduinoTestA2.ino   |   0
  src/Keyboard.java                                  |  11 --
- src/Operation.java                                 |   3 -
+ src/java.Operation.java                                 |   3 -
  8 files changed, 64 insertions(+), 158 deletions(-)
 
 commit 3271a20132838a5f5a5306b642b2794aaea94f08
@@ -37,10 +37,10 @@ Date:   Sat Feb 20 16:41:13 2021 +0200
  History_A2.html                                    |  53 ++++++++
  .../arduinoTestA1.ino}                             |   4 +-
  .../arduinoTest/arduinoTestA1/arduinoTestA2.ino    | 144 +++++++++++++++++++++
- bin/Operation.class                                | Bin 3847 -> 3870 bytes
+ bin/java.Operation.class                                | Bin 3847 -> 3870 bytes
  .../{ => arduinoTestA1}/arduinoTestA1.ino          |  10 +-
  .../arduinoTest/arduinoTestA1/arduinoTestA2.ino    | 144 +++++++++++++++++++++
- src/Operation.java                                 |   6 +-
+ src/java.Operation.java                                 |   6 +-
  8 files changed, 364 insertions(+), 15 deletions(-)
 
 commit 5b8a082ea4d4ea472952b4d4b06d877232b4b168
@@ -58,9 +58,9 @@ Date:   Sat Feb 20 16:15:33 2021 +0200
 
  History_A1.html                         |  10 +++++++++-
  bin/Arduino/arduinoTest/arduinoTest.ino |  19 ++++++++++---------
- bin/Client$DataListener.class           | Bin 2920 -> 2920 bytes
+ bin/java.Client$DataListener.class           | Bin 2920 -> 2920 bytes
  src/Arduino/arduinoTest/arduinoTest.ino |  19 ++++++++++---------
- src/Client.java                         |   2 +-
+ src/java.Client.java                         |   2 +-
  5 files changed, 30 insertions(+), 20 deletions(-)
 
 commit 690c5162248467430ce8cbf4463cacd05964f4a3
@@ -71,7 +71,7 @@ Date:   Sat Feb 20 16:13:40 2021 +0200
 
  .idea/workspace.xml                                |  11 +-
  .../{arduinoTest.ino => arduinoTestA1.ino}         |  19 +-
- src/Client.java                                    | 362 ++++++++++-----------
+ src/java.Client.java                                    | 362 ++++++++++-----------
  3 files changed, 197 insertions(+), 195 deletions(-)
 
 commit 8de24a6b0fb40907fe6aae3ceb3f7eed0620958e
@@ -82,7 +82,7 @@ Date:   Sat Feb 20 15:59:03 2021 +0200
     Merge branch 'main' of https://github.com/Livante/Proiect_PMD into main
     
      Conflicts:
-    	src/Client.java
+    	src/java.Client.java
 
 commit e2eaff9e63d824f622dcb330940bbb781a7fd10c
 Author: Darius <flocadariusandrei@gmail.com>
@@ -91,7 +91,7 @@ Date:   Sat Feb 20 15:58:55 2021 +0200
     Trying sendByteImmediately
 
  .idea/workspace.xml |  45 +++++----
- src/Client.java     | 263 ++++++++++++++++++++++++++--------------------------
+ src/java.Client.java     | 263 ++++++++++++++++++++++++++--------------------------
  2 files changed, 158 insertions(+), 150 deletions(-)
 
 commit 087aeaba1bc7ac10be916b890ff982e17b63336e
@@ -102,12 +102,12 @@ Date:   Sat Feb 20 15:57:30 2021 +0200
 
  History_A1.html                         |  22 ++++++++++++-
  bin/Arduino/arduinoTest/arduinoTest.ino |  30 +++++++----------
- bin/Client$DataListener.class           | Bin 2426 -> 2920 bytes
- bin/Client.class                        | Bin 4218 -> 4506 bytes
- bin/Operation.class                     | Bin 3817 -> 3847 bytes
+ bin/java.Client$DataListener.class           | Bin 2426 -> 2920 bytes
+ bin/java.Client.class                        | Bin 4218 -> 4506 bytes
+ bin/java.Operation.class                     | Bin 3817 -> 3847 bytes
  src/Arduino/arduinoTest/arduinoTest.ino |   7 ++--
- src/Client.java                         |  56 +++++++++++++++++++++++++++-----
- src/Operation.java                      |   8 ++---
+ src/java.Client.java                         |  56 +++++++++++++++++++++++++++-----
+ src/java.Operation.java                      |   8 ++---
  8 files changed, 87 insertions(+), 36 deletions(-)
 
 commit 3d19485f50bf7a311b76c9d95ffca871892b36fb
@@ -118,7 +118,7 @@ Date:   Sat Feb 20 15:26:07 2021 +0200
 
  History_A1.html                         |  34 +++++++++-
  bin/Arduino/arduinoTest/arduinoTest.ino |  84 ++++++++++++-----------
- bin/Client$DataListener.class           | Bin 2361 -> 2426 bytes
+ bin/java.Client$DataListener.class           | Bin 2361 -> 2426 bytes
  src/Arduino/arduinoTest/arduinoTest.ino | 117 +++++++++++++++++---------------
  4 files changed, 138 insertions(+), 97 deletions(-)
 
@@ -130,7 +130,7 @@ Date:   Sat Feb 20 15:00:39 2021 +0200
     Merge remote-tracking branch 'origin/main' into main
     
     # Conflicts:
-    #       src/Client.java
+    #       src/java.Client.java
 
 commit 8ef35cdb80a956b532d22b297911eedb8fd45819
 Author: Darius <flocadariusandrei@gmail.com>
@@ -141,7 +141,7 @@ Date:   Sat Feb 20 15:00:02 2021 +0200
  .idea/libraries/jSerialComm_2_6_2.xml |  9 ++++
  .idea/workspace.xml                   | 82 +++++++++++++----------------------
  Proiect_PMD.iml                       |  1 +
- src/Client.java                       | 20 ++++++---
+ src/java.Client.java                       | 20 ++++++---
  4 files changed, 52 insertions(+), 60 deletions(-)
 
 commit d445c54b4022a41006df2a1fb4af0f7df6543c26
@@ -163,8 +163,8 @@ Date:   Sat Feb 20 14:37:39 2021 +0200
  .../examples/SerialDisplay/SerialDisplay.ino       |   0
  .../keywords.txt                                   |   0
  bin/Arduino/arduinoTest/arduinoTest.ino            | 147 ++++++++++++
- bin/Client$DataListener.class                      | Bin 2304 -> 2361 bytes
- bin/Client.class                                   | Bin 4218 -> 4218 bytes
+ bin/java.Client$DataListener.class                      | Bin 2304 -> 2361 bytes
+ bin/java.Client.class                                   | Bin 4218 -> 4218 bytes
  .../LiquidCrystal_I2C.cpp                          | 257 +++++++++++++++++++++
  .../LiquidCrystal_I2C.h                            | 165 +++++++++++++
  .../README.md                                      |   9 +
@@ -174,7 +174,7 @@ Date:   Sat Feb 20 14:37:39 2021 +0200
  .../examples/SerialDisplay/SerialDisplay.ino       |  34 +++
  .../keywords.txt                                   |  46 ++++
  src/Arduino/arduinoTest/arduinoTest.ino            | 137 +++++++++++
- src/Client.java                                    |  11 +-
+ src/java.Client.java                                    |  11 +-
  25 files changed, 1108 insertions(+), 184 deletions(-)
 
 commit 2e7352383f137fafbd6ff6cfff0fe4554a28e6af
@@ -185,9 +185,9 @@ Date:   Sat Feb 13 15:46:43 2021 +0200
 
  Arduino/Functional/keypadAndLed/keypadAndLed.ino |  20 +++++++----------
  History_A1.html                                  |  26 ++++++++++++++++++++++-
- bin/Client$DataListener.class                    | Bin 2317 -> 2304 bytes
- bin/Client.class                                 | Bin 4218 -> 4218 bytes
- src/Client.java                                  |   1 -
+ bin/java.Client$DataListener.class                    | Bin 2317 -> 2304 bytes
+ bin/java.Client.class                                 | Bin 4218 -> 4218 bytes
+ src/java.Client.java                                  |   1 -
  5 files changed, 33 insertions(+), 14 deletions(-)
 
 commit 7bc317d3bea006397d6c0d08bc29b8981b3060c0
@@ -208,15 +208,15 @@ Date:   Sat Feb 13 14:38:57 2021 +0200
  Arduino/ARDUINO TRYING/sketch_apr03a.ino           |  41 -----
  Arduino/Functional/keypadAndLed/keypadAndLed.ino   |  56 ++----
  History_A1.html                                    | 194 ++++++++++++++++++++-
- bin/Client$DataListener.class                      | Bin 2191 -> 2317 bytes
- bin/Client.class                                   | Bin 4218 -> 4218 bytes
+ bin/java.Client$DataListener.class                      | Bin 2191 -> 2317 bytes
+ bin/java.Client.class                                   | Bin 4218 -> 4218 bytes
  bin/Main$DataListener.class                        | Bin 1258 -> 0 bytes
  bin/Main.class                                     | Bin 1280 -> 0 bytes
- bin/Operation.class                                | Bin 3833 -> 3817 bytes
+ bin/java.Operation.class                                | Bin 3833 -> 3817 bytes
  bin/SalaA1.txt                                     |   3 +
- src/Client.java                                    |  15 +-
+ src/java.Client.java                                    |  15 +-
  src/Main.java                                      |  42 -----
- src/Operation.java                                 |   4 +-
+ src/java.Operation.java                                 |   4 +-
  21 files changed, 246 insertions(+), 363 deletions(-)
 
 commit b067f558d2e27b8321c57f990f5d4f0e85389c04
@@ -411,15 +411,15 @@ Date:   Sat Nov 28 15:16:05 2020 +0200
  Arduino/ttt/ttt.ino                                |  27 -
  History_A1.html                                    | 105 ++-
  Untitled_0.stc                                     |  79 ---
- bin/Client$DataListener.class                      | Bin 0 -> 2191 bytes
- bin/Client.class                                   | Bin 3512 -> 4218 bytes
+ bin/java.Client$DataListener.class                      | Bin 0 -> 2191 bytes
+ bin/java.Client.class                                   | Bin 3512 -> 4218 bytes
  bin/Main$DataListener.class                        | Bin 0 -> 1258 bytes
  bin/Main.class                                     | Bin 0 -> 1280 bytes
- bin/Operation.class                                | Bin 3857 -> 3833 bytes
+ bin/java.Operation.class                                | Bin 3857 -> 3833 bytes
  jar_files/jSerialComm-2.4.0.jar                    | Bin 0 -> 382652 bytes
- src/Client.java                                    |  70 +-
+ src/java.Client.java                                    |  70 +-
  src/Main.java                                      |  42 ++
- src/Operation.java                                 |  29 +-
+ src/java.Operation.java                                 |  29 +-
  195 files changed, 300 insertions(+), 3366 deletions(-)
 
 commit ac85925f20fb7e860324fa648e52bee03e5bd0fc
@@ -657,10 +657,10 @@ Date:   Sat Nov 7 11:25:18 2020 +0200
  OTHER POSSIBLE UPGRADES/javax.mail.jar             |  Bin 0 -> 659033 bytes
  OTHER POSSIBLE UPGRADES/robojax-Keypad.zip         |  Bin 0 -> 18450 bytes
  Proiect_PMD.iml                                    |   11 +
- bin/Badge.class                                    |  Bin 0 -> 1011 bytes
- bin/Client.class                                   |  Bin 0 -> 3512 bytes
+ bin/java.Badge.class                                    |  Bin 0 -> 1011 bytes
+ bin/java.Client.class                                   |  Bin 0 -> 3512 bytes
  bin/Keyboard.class                                 |  Bin 0 -> 769 bytes
- bin/Operation.class                                |  Bin 0 -> 3857 bytes
+ bin/java.Operation.class                                |  Bin 0 -> 3857 bytes
  bin/PHP/add.inc.php                                |   15 +
  bin/PHP/addroom.inc.php                            |   15 +
  bin/PHP/dbh.inc.php                                |   12 +
@@ -669,7 +669,7 @@ Date:   Sat Nov 7 11:25:18 2020 +0200
  bin/PHP/password-hist.inc.php                      |   23 +
  bin/PHP/removeEmployee.inc.php                     |   14 +
  bin/PHP/removeRoom.inc.php                         |   14 +
- bin/Room.class                                     |  Bin 0 -> 768 bytes
+ bin/java.Room.class                                     |  Bin 0 -> 768 bytes
  bin/WEB/Admin add employee.html                    |   97 +
  bin/WEB/Admin add room.html                        |   96 +
  bin/WEB/Admin page.html                            |  115 +
@@ -727,10 +727,10 @@ Date:   Sat Nov 7 11:25:18 2020 +0200
  bin/js/spectragram.min.js                          |    1 +
  bin/js/twitterfetcher.min.js                       |   63 +
  bin/js/ytplayer.min.js                             |    1 +
- src/Badge.java                                     |   36 +
- src/Client.java                                    |   92 +
+ src/java.Badge.java                                     |   36 +
+ src/java.Client.java                                    |   92 +
  src/Keyboard.java                                  |   11 +
- src/Operation.java                                 |  100 +
+ src/java.Operation.java                                 |  100 +
  src/PHP/add.inc.php                                |   15 +
  src/PHP/addroom.inc.php                            |   15 +
  src/PHP/dbh.inc.php                                |   12 +
@@ -739,7 +739,7 @@ Date:   Sat Nov 7 11:25:18 2020 +0200
  src/PHP/password-hist.inc.php                      |   23 +
  src/PHP/removeEmployee.inc.php                     |   14 +
  src/PHP/removeRoom.inc.php                         |   14 +
- src/Room.java                                      |   30 +
+ src/java.Room.java                                      |   30 +
  src/WEB/Admin add employee.html                    |   97 +
  src/WEB/Admin add room.html                        |   96 +
  src/WEB/Admin page.html                            |  115 +
