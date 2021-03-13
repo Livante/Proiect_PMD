@@ -1,8 +1,8 @@
-package java;
+package main;
+
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -100,13 +100,13 @@ public class Client {
 					byte buffer;
 					if (sendMsgBack == true) {
 						buffer = 1;
-						System.out.println("GRANTED");
+						System.out.println("ACCESS GRANTED");
 						System.out.println("BUFFER: 1");
 						newData = new byte[availablePort[i].bytesAvailable()];
 						sendByteImmediately(buffer);
 					} else {
 						buffer = 2;
-						System.out.println("DENIED");
+						System.out.println("ACCESS DENIED");
 						System.out.println("BUFFER: 2");
 						newData = new byte[availablePort[i].bytesAvailable()];
 						sendByteImmediately(buffer);
@@ -137,7 +137,6 @@ public class Client {
 			}
 
 		} catch (Throwable e) {
-			System.out.print("Do not connect to DB - Error:" + e);
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e1) {}
@@ -146,43 +145,11 @@ public class Client {
 
 	public static void connectionForDatabases(Operation op, String database)
 			throws ClassNotFoundException, SQLException, IOException {
-
-		if (database.contains("badge")) {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = null;
-			conn = DriverManager.getConnection(database, "root", "");
-			System.out.println();
-			System.out.println("Database is connected !");
-			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM  badge");
-			populateBadgeList(op, rs);
-			conn.close();
-		}
-
-		if (database.contains("room")) {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = null;
-			conn = DriverManager.getConnection(database, "root", "");
-			System.out.println();
-			System.out.println("Database is connected !");
-			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM  room");
-			populateRoomList(op, rs);
-			conn.close();
-		}
-
-		if (database.contains("history")) {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = null;
-			conn = DriverManager.getConnection(database, "root", "");
-			System.out.println();
-			System.out.println("Database is connected !");
-			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM  history");
-			populateHistoryList(op, rs);
-			conn.close();
-		}
-
+		
+		Badge.connectToDatabase(op, database);
+		Room.connectToDatabase(op, database);
+		History.connectToDatabase(op, database);
+		
 	}
 
 	public static void populateBadgeList(Operation op, ResultSet rs) throws SQLException {
