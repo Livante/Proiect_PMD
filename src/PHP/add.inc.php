@@ -3,8 +3,9 @@
 
 $function = $_POST['function'];
 $badgeId = $_POST['badgeId'];
+$badgeCode = $_POST['badgeCode'];
 
-$sql = "INSERT INTO badge (function, badgeId) VALUES('$function','$badgeId');";
+$sql = "INSERT INTO badge (badgeId, function, badgeCode) VALUES('$badgeId', '$function', '$badgeCode');";
 mysqli_query($conn, $sql);
 if(!$php_errormsg){
     echo "Added successfully";
