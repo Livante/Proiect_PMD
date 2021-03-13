@@ -37,6 +37,7 @@ public class Client {
 			availablePort[i].writeBytes(new byte[]{b}, 1);
 		}
 
+
 		@Override
 		public int getListeningEvents() { return SerialPort.LISTENING_EVENT_DATA_AVAILABLE; }
 		
