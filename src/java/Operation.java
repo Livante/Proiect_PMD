@@ -1,5 +1,4 @@
 package java;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -9,13 +8,13 @@ import java.util.List;
 
 public class Operation {
 	
-//	public static final String ADMIN="123456";
-//	public static final String HISTORY="654321";
+//ADMIN="123456";
+//HISTORY="654321";
 	
 	
 	public List <Room> roomList= new ArrayList <Room>();
 	public List <Badge> badgeList= new ArrayList <Badge>();
-	public List <History> historyList= new ArrayList <History>();
+	public List <History> historyList;
 	private boolean accessFlag=false;
 	
 	public boolean isAccessFlag() {
@@ -66,25 +65,25 @@ public class Operation {
 				accessFlag=false;
 				System.out.println("NON EXISTENT EMPLOYEE");
 			}
-			FileWriter fw=new FileWriter("History_"+sala+".html",true);
-			writeHTML(badgeCode,accessFlag,function,fw);
-			fw.close();
+			
+			writeHTML(badgeCode,accessFlag,function);
+			
 			}
 			
-	private void writeHTML(String s, boolean accessFlag,String employee, FileWriter pw) throws IOException {
+	private void writeHTML(String s, boolean accessFlag,String employee) throws IOException {
 			Date d=new Date(); 
 			if(!accessFlag) {
-				pw.write("<p><font color=\"red\">");
-				pw.write("\nDate "+d+" Persons code "+s+" employee: "+employee+" ACCESS DENIED\n");
-				pw.write("</br>");
-				pw.write("</font></p>");
-				pw.write("<p><font color=\"red\">");	
+//				pw.write("<p><font color=\"red\">");
+//				pw.write("\nDate "+d+" Persons code "+s+" employee: "+employee+" ACCESS DENIED\n");
+//				pw.write("</br>");
+//				pw.write("</font></p>");
+//				pw.write("<p><font color=\"red\">");	
 			}
 			else {
-				pw.write("<p><font color=\"green\">");
-				pw.write("\nDate "+d+" Persons code "+s+" employee: "+employee+" ACCESS GRANTED\n");
-				pw.write("</br>");
-				pw.write("<p><font color=\"green\">");
+//				pw.write("<p><font color=\"green\">");
+//				pw.write("\nDate "+d+" Persons code "+s+" employee: "+employee+" ACCESS GRANTED\n");
+//				pw.write("</br>");
+//				pw.write("<p><font color=\"green\">");
 			}
 	}
 }
