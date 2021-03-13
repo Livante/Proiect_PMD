@@ -1,0 +1,809 @@
+commit edd883e2457c6dd5ea81f08c3f8ad157ecc11b4f
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 27 19:20:19 2021 +0200
+
+    fully functional
+
+ History_A1.html               |  10 +++++++++-
+ History_A2.html               |  10 +++++++++-
+ bin/Client$DataListener.class | Bin 2920 -> 3103 bytes
+ bin/Client.class              | Bin 4506 -> 4828 bytes
+ src/Client.java               |  42 ++++++++++++++++++++++++++++--------------
+ 5 files changed, 46 insertions(+), 16 deletions(-)
+
+commit ba798a913b59c7cd32a4b0dcd8a32c391e372f29
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Mon Feb 22 20:45:59 2021 +0200
+
+    Scanner removed. Booth Arduino works.
+
+ History_A1.html                                    |  14 ++
+ History_A2.html                                    |  50 +++++++
+ bin/Keyboard.class                                 | Bin 769 -> 0 bytes
+ bin/Operation.class                                | Bin 3870 -> 3795 bytes
+ .../arduinoTest/arduinoTestA1/arduinoTestA2.ino    | 144 ---------------------
+ .../arduinoTest/arduinoTestA2}/arduinoTestA2.ino   |   0
+ src/Keyboard.java                                  |  11 --
+ src/Operation.java                                 |   3 -
+ 8 files changed, 64 insertions(+), 158 deletions(-)
+
+commit 3271a20132838a5f5a5306b642b2794aaea94f08
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 20 16:41:13 2021 +0200
+
+    Doua fisiere ino
+
+ History_A1.html                                    |  18 ++-
+ History_A2.html                                    |  53 ++++++++
+ .../arduinoTestA1.ino}                             |   4 +-
+ .../arduinoTest/arduinoTestA1/arduinoTestA2.ino    | 144 +++++++++++++++++++++
+ bin/Operation.class                                | Bin 3847 -> 3870 bytes
+ .../{ => arduinoTestA1}/arduinoTestA1.ino          |  10 +-
+ .../arduinoTest/arduinoTestA1/arduinoTestA2.ino    | 144 +++++++++++++++++++++
+ src/Operation.java                                 |   6 +-
+ 8 files changed, 364 insertions(+), 15 deletions(-)
+
+commit 5b8a082ea4d4ea472952b4d4b06d877232b4b168
+Merge: ac09985 690c516
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 20 16:20:04 2021 +0200
+
+    merge
+
+commit ac099850c585b31fac74ddf661ac728cc1e6b1d0
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 20 16:15:33 2021 +0200
+
+    aa
+
+ History_A1.html                         |  10 +++++++++-
+ bin/Arduino/arduinoTest/arduinoTest.ino |  19 ++++++++++---------
+ bin/Client$DataListener.class           | Bin 2920 -> 2920 bytes
+ src/Arduino/arduinoTest/arduinoTest.ino |  19 ++++++++++---------
+ src/Client.java                         |   2 +-
+ 5 files changed, 30 insertions(+), 20 deletions(-)
+
+commit 690c5162248467430ce8cbf4463cacd05964f4a3
+Author: Darius <flocadariusandrei@gmail.com>
+Date:   Sat Feb 20 16:13:40 2021 +0200
+
+    Preparing to connect 2 relays
+
+ .idea/workspace.xml                                |  11 +-
+ .../{arduinoTest.ino => arduinoTestA1.ino}         |  19 +-
+ src/Client.java                                    | 362 ++++++++++-----------
+ 3 files changed, 197 insertions(+), 195 deletions(-)
+
+commit 8de24a6b0fb40907fe6aae3ceb3f7eed0620958e
+Merge: e2eaff9 087aeab
+Author: Darius <flocadariusandrei@gmail.com>
+Date:   Sat Feb 20 15:59:03 2021 +0200
+
+    Merge branch 'main' of https://github.com/Livante/Proiect_PMD into main
+    
+     Conflicts:
+    	src/Client.java
+
+commit e2eaff9e63d824f622dcb330940bbb781a7fd10c
+Author: Darius <flocadariusandrei@gmail.com>
+Date:   Sat Feb 20 15:58:55 2021 +0200
+
+    Trying sendByteImmediately
+
+ .idea/workspace.xml |  45 +++++----
+ src/Client.java     | 263 ++++++++++++++++++++++++++--------------------------
+ 2 files changed, 158 insertions(+), 150 deletions(-)
+
+commit 087aeaba1bc7ac10be916b890ff982e17b63336e
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 20 15:57:30 2021 +0200
+
+    Generalizare
+
+ History_A1.html                         |  22 ++++++++++++-
+ bin/Arduino/arduinoTest/arduinoTest.ino |  30 +++++++----------
+ bin/Client$DataListener.class           | Bin 2426 -> 2920 bytes
+ bin/Client.class                        | Bin 4218 -> 4506 bytes
+ bin/Operation.class                     | Bin 3817 -> 3847 bytes
+ src/Arduino/arduinoTest/arduinoTest.ino |   7 ++--
+ src/Client.java                         |  56 +++++++++++++++++++++++++++-----
+ src/Operation.java                      |   8 ++---
+ 8 files changed, 87 insertions(+), 36 deletions(-)
+
+commit 3d19485f50bf7a311b76c9d95ffca871892b36fb
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 20 15:26:07 2021 +0200
+
+    Rezolvat
+
+ History_A1.html                         |  34 +++++++++-
+ bin/Arduino/arduinoTest/arduinoTest.ino |  84 ++++++++++++-----------
+ bin/Client$DataListener.class           | Bin 2361 -> 2426 bytes
+ src/Arduino/arduinoTest/arduinoTest.ino | 117 +++++++++++++++++---------------
+ 4 files changed, 138 insertions(+), 97 deletions(-)
+
+commit ae851f6e0faed4543a7c9dab4181961fe36d0352
+Merge: 8ef35cd d445c54
+Author: Darius <flocadariusandrei@gmail.com>
+Date:   Sat Feb 20 15:00:39 2021 +0200
+
+    Merge remote-tracking branch 'origin/main' into main
+    
+    # Conflicts:
+    #       src/Client.java
+
+commit 8ef35cdb80a956b532d22b297911eedb8fd45819
+Author: Darius <flocadariusandrei@gmail.com>
+Date:   Sat Feb 20 15:00:02 2021 +0200
+
+    Trying sendByteImmediately
+
+ .idea/libraries/jSerialComm_2_6_2.xml |  9 ++++
+ .idea/workspace.xml                   | 82 +++++++++++++----------------------
+ Proiect_PMD.iml                       |  1 +
+ src/Client.java                       | 20 ++++++---
+ 4 files changed, 52 insertions(+), 60 deletions(-)
+
+commit d445c54b4022a41006df2a1fb4af0f7df6543c26
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 20 14:37:39 2021 +0200
+
+    Intaarziere
+
+ Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino |  53 -----
+ Arduino/ARDUINO TRYING/probaYala/probaYala.ino     |  16 --
+ Arduino/Functional/keypadAndLed/keypadAndLed.ino   | 224 +++++++++---------
+ History_A1.html                                    |  76 ++++++
+ .../LiquidCrystal_I2C.cpp                          |   0
+ .../LiquidCrystal_I2C.h                            |   0
+ .../README.md                                      |   0
+ .../examples/BlinkingCursor/BlinkingCursor.ino     |   0
+ .../examples/CustomChars/CustomChars.ino           |   0
+ .../examples/HelloWorld/HelloWorld.ino             |   0
+ .../examples/SerialDisplay/SerialDisplay.ino       |   0
+ .../keywords.txt                                   |   0
+ bin/Arduino/arduinoTest/arduinoTest.ino            | 147 ++++++++++++
+ bin/Client$DataListener.class                      | Bin 2304 -> 2361 bytes
+ bin/Client.class                                   | Bin 4218 -> 4218 bytes
+ .../LiquidCrystal_I2C.cpp                          | 257 +++++++++++++++++++++
+ .../LiquidCrystal_I2C.h                            | 165 +++++++++++++
+ .../README.md                                      |   9 +
+ .../examples/BlinkingCursor/BlinkingCursor.ino     |  32 +++
+ .../examples/CustomChars/CustomChars.ino           |  65 ++++++
+ .../examples/HelloWorld/HelloWorld.ino             |  20 ++
+ .../examples/SerialDisplay/SerialDisplay.ino       |  34 +++
+ .../keywords.txt                                   |  46 ++++
+ src/Arduino/arduinoTest/arduinoTest.ino            | 137 +++++++++++
+ src/Client.java                                    |  11 +-
+ 25 files changed, 1108 insertions(+), 184 deletions(-)
+
+commit 2e7352383f137fafbd6ff6cfff0fe4554a28e6af
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 13 15:46:43 2021 +0200
+
+    unul in urma
+
+ Arduino/Functional/keypadAndLed/keypadAndLed.ino |  20 +++++++----------
+ History_A1.html                                  |  26 ++++++++++++++++++++++-
+ bin/Client$DataListener.class                    | Bin 2317 -> 2304 bytes
+ bin/Client.class                                 | Bin 4218 -> 4218 bytes
+ src/Client.java                                  |   1 -
+ 5 files changed, 33 insertions(+), 14 deletions(-)
+
+commit 7bc317d3bea006397d6c0d08bc29b8981b3060c0
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Feb 13 14:38:57 2021 +0200
+
+    midificare pentru sali
+
+ .idea/vcs.xml                                      |   6 +
+ .idea/workspace.xml                                |  16 +-
+ Arduino/ARDUINO TRYING/BLUETOOTH/oc/oc.ino         |  40 -----
+ Arduino/ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino |  43 -----
+ .../ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino.ino |  44 -----
+ Arduino/ARDUINO TRYING/LCD_code/LCD_code.ino       |  17 --
+ Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino |  25 ---
+ .../LCDyalaTAST/sketch_mar04b/sketch_mar04b.ino    |  42 -----
+ Arduino/ARDUINO TRYING/probaYala/LCD/LCD.ino       |  21 ---
+ Arduino/ARDUINO TRYING/sketch_apr03a.ino           |  41 -----
+ Arduino/Functional/keypadAndLed/keypadAndLed.ino   |  56 ++----
+ History_A1.html                                    | 194 ++++++++++++++++++++-
+ bin/Client$DataListener.class                      | Bin 2191 -> 2317 bytes
+ bin/Client.class                                   | Bin 4218 -> 4218 bytes
+ bin/Main$DataListener.class                        | Bin 1258 -> 0 bytes
+ bin/Main.class                                     | Bin 1280 -> 0 bytes
+ bin/Operation.class                                | Bin 3833 -> 3817 bytes
+ bin/SalaA1.txt                                     |   3 +
+ src/Client.java                                    |  15 +-
+ src/Main.java                                      |  42 -----
+ src/Operation.java                                 |   4 +-
+ 21 files changed, 246 insertions(+), 363 deletions(-)
+
+commit b067f558d2e27b8321c57f990f5d4f0e85389c04
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Nov 28 15:16:05 2020 +0200
+
+    avem comunicare
+
+ .classpath                                         |   1 +
+ Arduino/ARDUINO/arduino/Untitled-2.ino             | 109 ----
+ Arduino/ARDUINO/arduino/arduino.ino                |  73 ---
+ .../CoolTerm Capture 2020-11-14 14-10-36.txt       |  46 --
+ .../CoolTerm Libs/Appearance Pakx64.dll            | Bin 229552 -> 0 bytes
+ .../CoolTermWin/CoolTerm Libs/Cryptox64.dll        | Bin 463536 -> 0 bytes
+ .../CoolTerm Libs/Internet Encodingsx64.dll        | Bin 27312 -> 0 bytes
+ .../CoolTermWin/CoolTerm Libs/RegExx64.dll         | Bin 385200 -> 0 bytes
+ .../CoolTermWin/CoolTerm Libs/XMLx64.dll           | Bin 428208 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/AboutIcon.png   | Bin 8295 -> 0 bytes
+ .../CoolTerm Resources/AboutIcon@2x.png            | Bin 25446 -> 0 bytes
+ .../CoolTerm Resources/AutoScrollsmall.png         | Bin 1639 -> 0 bytes
+ .../CoolTerm Resources/AutoScrollsmall@2x.png      | Bin 2299 -> 0 bytes
+ .../CoolTerm Resources/AutoScrollsmall@3x.png      | Bin 2774 -> 0 bytes
+ .../CoolTerm Resources/CaptureTextsmall_Icon.png   | Bin 1851 -> 0 bytes
+ .../CaptureTextsmall_Icon@2x.png                   | Bin 3053 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/Clear_Icon.png  | Bin 2978 -> 0 bytes
+ .../CoolTerm Resources/Clear_Icon@2x.png           | Bin 8579 -> 0 bytes
+ .../CoolTerm Resources/Clearsmall_Icon.png         | Bin 1902 -> 0 bytes
+ .../CoolTerm Resources/Clearsmall_Icon@2x.png      | Bin 2978 -> 0 bytes
+ .../CoolTerm Resources/Clearsmall_Icon@3x.png      | Bin 5057 -> 0 bytes
+ .../CoolTerm Resources/Closesmall_Icon.png         | Bin 1992 -> 0 bytes
+ .../CoolTerm Resources/Closesmall_Icon@2x.png      | Bin 3821 -> 0 bytes
+ .../CoolTerm Resources/Closesmall_Icon@3x.png      | Bin 5682 -> 0 bytes
+ .../CoolTerm Resources/Connect_Icon.png            | Bin 2992 -> 0 bytes
+ .../CoolTerm Resources/Connect_Icon@2x.png         | Bin 5488 -> 0 bytes
+ .../CoolTerm Resources/Connect_Icon@3x.png         | Bin 6356 -> 0 bytes
+ .../CoolTerm Resources/Connect_Icon_small.png      | Bin 1567 -> 0 bytes
+ .../CoolTerm Resources/Connect_Icon_small@2x.png   | Bin 2135 -> 0 bytes
+ .../CoolTerm Resources/Connect_Icon_small@3x.png   | Bin 3521 -> 0 bytes
+ .../CoolTerm Resources/CoolTerm_Icon_16x16.png     | Bin 1886 -> 0 bytes
+ .../CoolTerm Resources/CoolTerm_Icon_16x16@2x.png  | Bin 2215 -> 0 bytes
+ .../CoolTerm Resources/CoolTerm_Icon_16x16@3x.png  | Bin 3242 -> 0 bytes
+ .../CoolTerm Resources/Copysmall_Icon.png          | Bin 1745 -> 0 bytes
+ .../CoolTerm Resources/Copysmall_Icon@2x.png       | Bin 2971 -> 0 bytes
+ .../CoolTerm Resources/Cutsmall_Icon.png           | Bin 1686 -> 0 bytes
+ .../CoolTerm Resources/Cutsmall_Icon@2x.png        | Bin 3095 -> 0 bytes
+ .../CoolTerm Resources/Disconnect_Icon.png         | Bin 3740 -> 0 bytes
+ .../CoolTerm Resources/Disconnect_Icon@2x.png      | Bin 7953 -> 0 bytes
+ .../CoolTerm Resources/Disconnect_Icon@3x.png      | Bin 12029 -> 0 bytes
+ .../CoolTerm Resources/Disconnect_Icon_small.png   | Bin 1904 -> 0 bytes
+ .../Disconnect_Icon_small@2x.png                   | Bin 2890 -> 0 bytes
+ .../Disconnect_Icon_small@3x.png                   | Bin 4881 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/DocIcon0.ico    | Bin 381142 -> 0 bytes
+ .../CoolTerm Resources/Flush_Icon_small.png        | Bin 1701 -> 0 bytes
+ .../CoolTerm Resources/Flush_Icon_small@2x.png     | Bin 2346 -> 0 bytes
+ .../CoolTerm Resources/Flush_Icon_small@3x.png     | Bin 3737 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/Help Text.txt   | 477 --------------
+ .../CoolTerm Resources/HelpSmall_Icon.png          | Bin 2135 -> 0 bytes
+ .../CoolTerm Resources/HelpSmall_Icon@2x.png       | Bin 3596 -> 0 bytes
+ .../CoolTerm Resources/HelpSmall_Icon@3x.png       | Bin 6115 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/Help_Icon.png   | Bin 3596 -> 0 bytes
+ .../CoolTerm Resources/Help_Icon@2x.png            | Bin 7730 -> 0 bytes
+ .../CoolTerm Resources/Help_Icon@3x.png            | Bin 13314 -> 0 bytes
+ .../CoolTerm Resources/LineStatusActive.png        | Bin 1934 -> 0 bytes
+ .../CoolTerm Resources/LineStatusActive@2x.png     | Bin 3171 -> 0 bytes
+ .../CoolTerm Resources/LineStatusActive@3x.png     | Bin 5156 -> 0 bytes
+ .../CoolTerm Resources/LineStatusInactive.png      | Bin 1886 -> 0 bytes
+ .../CoolTerm Resources/LineStatusInactive@2x.png   | Bin 2909 -> 0 bytes
+ .../CoolTerm Resources/LineStatusInactive@3x.png   | Bin 4826 -> 0 bytes
+ .../CoolTerm Resources/LineStatusNone.png          | Bin 1837 -> 0 bytes
+ .../CoolTerm Resources/LineStatusNone@2x.png       | Bin 2755 -> 0 bytes
+ .../CoolTerm Resources/LineStatusNone@3x.png       | Bin 4580 -> 0 bytes
+ .../CoolTerm Resources/LineStatusRemoteOff.png     | Bin 1888 -> 0 bytes
+ .../CoolTerm Resources/LineStatusRemoteOff@2x.png  | Bin 3067 -> 0 bytes
+ .../CoolTerm Resources/LineStatusRemoteOff@3x.png  | Bin 4718 -> 0 bytes
+ .../CoolTerm Resources/LineStatusRemoteOn.png      | Bin 1923 -> 0 bytes
+ .../CoolTerm Resources/LineStatusRemoteOn@2x.png   | Bin 3110 -> 0 bytes
+ .../CoolTerm Resources/LineStatusRemoteOn@3x.png   | Bin 5011 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/New_Icon.png    | Bin 1782 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/New_Icon@2x.png | Bin 2823 -> 0 bytes
+ .../CoolTerm Resources/Newsmall_Icon.png           | Bin 1489 -> 0 bytes
+ .../CoolTerm Resources/Newsmall_Icon@2x.png        | Bin 1782 -> 0 bytes
+ .../CoolTerm Resources/Newsmall_Icon@3x.png        | Bin 2160 -> 0 bytes
+ .../CoolTerm Resources/OpenFile_Icon.png           | Bin 3317 -> 0 bytes
+ .../CoolTerm Resources/OpenFile_Icon@2x.png        | Bin 7498 -> 0 bytes
+ .../CoolTerm Resources/OpenFile_Icon@3x.png        | Bin 14063 -> 0 bytes
+ .../CoolTerm Resources/OpenFilesmall_Icon.png      | Bin 1835 -> 0 bytes
+ .../CoolTerm Resources/OpenFilesmall_Icon@2x.png   | Bin 3317 -> 0 bytes
+ .../CoolTerm Resources/Options_Icon.png            | Bin 3692 -> 0 bytes
+ .../CoolTerm Resources/Options_Icon@2x.png         | Bin 7550 -> 0 bytes
+ .../CoolTerm Resources/Options_Icon@3x.png         | Bin 12708 -> 0 bytes
+ .../CoolTerm Resources/Optionssmall_Icon.png       | Bin 1959 -> 0 bytes
+ .../CoolTerm Resources/Optionssmall_Icon@2x.png    | Bin 3082 -> 0 bytes
+ .../CoolTerm Resources/Optionssmall_Icon@3x.png    | Bin 4352 -> 0 bytes
+ .../CoolTerm Resources/Pastesmall_Icon.png         | Bin 1735 -> 0 bytes
+ .../CoolTerm Resources/Pastesmall_Icon@2x.png      | Bin 2880 -> 0 bytes
+ .../PauseRecordingsmall_Icon.png                   | Bin 1639 -> 0 bytes
+ .../PauseRecordingsmall_Icon@2x.png                | Bin 2299 -> 0 bytes
+ .../PauseRecordingsmall_Icon@3x.png                | Bin 3503 -> 0 bytes
+ .../CoolTerm Resources/Preferencessmall_Icon.png   | Bin 1814 -> 0 bytes
+ .../Preferencessmall_Icon@2x.png                   | Bin 2537 -> 0 bytes
+ .../Preferencessmall_Icon@3x.png                   | Bin 3534 -> 0 bytes
+ .../CoolTerm Resources/Printsmall_Icon.png         | Bin 1660 -> 0 bytes
+ .../CoolTerm Resources/Printsmall_Icon@2x.png      | Bin 2448 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/Resetsmall.png  | Bin 2006 -> 0 bytes
+ .../CoolTerm Resources/Resetsmall@2x.png           | Bin 3515 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/Resources.sdef  | 204 ------
+ .../CoolTerm Resources/SaveFileAssmall_Icon.png    | Bin 1902 -> 0 bytes
+ .../CoolTerm Resources/SaveFileAssmall_Icon@2x.png | Bin 3140 -> 0 bytes
+ .../CoolTerm Resources/SaveFile_Icon.png           | Bin 2596 -> 0 bytes
+ .../CoolTerm Resources/SaveFile_Icon@2x.png        | Bin 3105 -> 0 bytes
+ .../CoolTerm Resources/SaveFile_Icon@3x.png        | Bin 3568 -> 0 bytes
+ .../CoolTerm Resources/SaveFilesmall_Icon.png      | Bin 1772 -> 0 bytes
+ .../CoolTerm Resources/SaveFilesmall_Icon@2x.png   | Bin 2469 -> 0 bytes
+ .../CoolTerm Resources/SendBreak_small.png         | Bin 1676 -> 0 bytes
+ .../CoolTerm Resources/SendBreak_small@2x.png      | Bin 2518 -> 0 bytes
+ .../CoolTerm Resources/SendBreak_small@3x.png      | Bin 4219 -> 0 bytes
+ .../CoolTerm Resources/SendStringSmall_Icon.png    | Bin 1567 -> 0 bytes
+ .../CoolTerm Resources/SendStringSmall_Icon@2x.png | Bin 2181 -> 0 bytes
+ .../CoolTerm Resources/SendStringSmall_Icon@3x.png | Bin 2447 -> 0 bytes
+ .../CoolTerm Resources/SendTextDone.wav            | Bin 42430 -> 0 bytes
+ .../CoolTerm Resources/SendTextsmall_Icon.png      | Bin 1833 -> 0 bytes
+ .../CoolTerm Resources/SendTextsmall_Icon@2x.png   | Bin 3090 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/SplashIcon.png  | Bin 25446 -> 0 bytes
+ .../CoolTerm Resources/SplashIcon@2x.png           | Bin 85744 -> 0 bytes
+ .../CoolTerm Resources/SplashIcon@3x.png           | Bin 188299 -> 0 bytes
+ .../StartRecordingsmall_Icon.png                   | Bin 1955 -> 0 bytes
+ .../StartRecordingsmall_Icon@2x.png                | Bin 3027 -> 0 bytes
+ .../StartRecordingsmall_Icon@3x.png                | Bin 5162 -> 0 bytes
+ .../CoolTerm Resources/StopRecordingsmall_Icon.png | Bin 1610 -> 0 bytes
+ .../StopRecordingsmall_Icon@2x.png                 | Bin 2203 -> 0 bytes
+ .../StopRecordingsmall_Icon@3x.png                 | Bin 3061 -> 0 bytes
+ .../CoolTerm Resources/TerminalBeep.wav            | Bin 3088 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/Timestamp.png   | Bin 1892 -> 0 bytes
+ .../CoolTerm Resources/Timestamp@2x.png            | Bin 2872 -> 0 bytes
+ .../CoolTerm Resources/Timestamp@3x.png            | Bin 3867 -> 0 bytes
+ .../CoolTerm Resources/Undosmall_Icon.png          | Bin 1759 -> 0 bytes
+ .../CoolTerm Resources/Undosmall_Icon@2x.png       | Bin 2405 -> 0 bytes
+ .../CoolTerm Resources/ViewerASCII_Icon.png        | Bin 2489 -> 0 bytes
+ .../CoolTerm Resources/ViewerASCII_Icon@2x.png     | Bin 4295 -> 0 bytes
+ .../CoolTerm Resources/ViewerASCII_Icon@3x.png     | Bin 6619 -> 0 bytes
+ .../CoolTerm Resources/ViewerASCIIsmall_Icon.png   | Bin 1726 -> 0 bytes
+ .../ViewerASCIIsmall_Icon@2x.png                   | Bin 2318 -> 0 bytes
+ .../ViewerASCIIsmall_Icon@3x.png                   | Bin 3093 -> 0 bytes
+ .../CoolTerm Resources/ViewerHEX_Icon.png          | Bin 2515 -> 0 bytes
+ .../CoolTerm Resources/ViewerHEX_Icon@2x.png       | Bin 3902 -> 0 bytes
+ .../CoolTerm Resources/ViewerHEX_Icon@3x.png       | Bin 5956 -> 0 bytes
+ .../CoolTerm Resources/ViewerHEXsmall_Icon.png     | Bin 1645 -> 0 bytes
+ .../CoolTerm Resources/ViewerHEXsmall_Icon@2x.png  | Bin 2090 -> 0 bytes
+ .../CoolTerm Resources/ViewerHEXsmall_Icon@3x.png  | Bin 2754 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/WrapText.png    | Bin 1632 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/WrapText@2x.png | Bin 2088 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/WrapText@3x.png | Bin 2741 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/ct_error.html   |  17 -
+ .../CoolTermWin/CoolTerm Resources/ct_form.html    | 366 -----------
+ .../CoolTermWin/CoolTerm Resources/ct_success.html |  17 -
+ .../CoolTermWin/CoolTerm Resources/mwx.png         | Bin 4375 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx@2x.png      | Bin 8589 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx@3x.png      | Bin 22862 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx_dm.png      | Bin 6625 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx_dm@2x.png   | Bin 16763 -> 0 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx_dm@3x.png   | Bin 28338 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/CoolTerm.exe       | Bin 6370816 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/ReadMe.txt         | 506 --------------
+ .../CoolTermWin/Scripting/Python/.DS_Store         | Bin 8196 -> 0 bytes
+ .../CoolTermWin/Scripting/Python/CoolTerm.py       | 725 ---------------------
+ .../Scripting/Python/Examples/.DS_Store            | Bin 6148 -> 0 bytes
+ .../Python/Examples/Example 1 - Introduction.py    |  53 --
+ .../Examples/Example 10 - Sending a text file.py   |  37 --
+ ...11 - Controlling CoolTerm from serial target.py |  83 ---
+ .../Example 2 - Loading Connection Settings.py     |  25 -
+ ...ple 3 - Capture received data to a text file.py |  44 --
+ ...mple 4 - Send received characters to console.py |  49 --
+ .../Example 5 - Responding to received data.py     |  59 --
+ .../Python/Examples/Example 6 - Toggle DTR.py      |  40 --
+ .../Examples/Example 7 - Select Serial Port.py     |  43 --
+ .../Python/Examples/Example 8 - Datalogging.py     |  89 ---
+ .../Python/Examples/Example 9 - Macro Buttons.py   |  68 --
+ .../Scripting/Remote Control Socket Protocol.pdf   | Bin 315106 -> 0 bytes
+ .../CoolTermWin/Scripting/Scripting ReadMe.txt     |  36 -
+ .../CoolTermWin/Windows System Requirements.txt    |  17 -
+ .../CoolTermWin/CoolTermWin/XojoGUIFramework64.dll | Bin 4258992 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/icudt65.dll        | Bin 27980288 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/icuin65.dll        | Bin 2573824 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/icuuc65.dll        | Bin 1815040 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/msvcp120.dll       | Bin 660128 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/msvcp140.dll       | Bin 639656 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/msvcr120.dll       | Bin 963232 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/vccorlib140.dll    | Bin 395440 -> 0 bytes
+ Arduino/CoolTermWin/CoolTermWin/vcruntime140.dll   | Bin 89272 -> 0 bytes
+ Arduino/Functional/keypadAndLed/keypadAndLed.ino   | 105 ++-
+ Arduino/LCD with potentiometer/LCD.ino/LCD.ino.ino |  25 -
+ Arduino/ttt/ttt.ino                                |  27 -
+ History_A1.html                                    | 105 ++-
+ Untitled_0.stc                                     |  79 ---
+ bin/Client$DataListener.class                      | Bin 0 -> 2191 bytes
+ bin/Client.class                                   | Bin 3512 -> 4218 bytes
+ bin/Main$DataListener.class                        | Bin 0 -> 1258 bytes
+ bin/Main.class                                     | Bin 0 -> 1280 bytes
+ bin/Operation.class                                | Bin 3857 -> 3833 bytes
+ jar_files/jSerialComm-2.4.0.jar                    | Bin 0 -> 382652 bytes
+ src/Client.java                                    |  70 +-
+ src/Main.java                                      |  42 ++
+ src/Operation.java                                 |  29 +-
+ 195 files changed, 300 insertions(+), 3366 deletions(-)
+
+commit ac85925f20fb7e860324fa648e52bee03e5bd0fc
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Nov 14 14:54:50 2020 +0200
+
+    MERGE LCD UL! Conexiune in lucru
+
+ Arduino/ARDUINO TRYING/BLUETOOTH/oc/oc.ino         |  26 +-
+ Arduino/ARDUINO/arduino/Untitled-2.ino             | 109 ++++
+ Arduino/ARDUINO/arduino/arduino.ino                |  91 +--
+ .../CoolTerm Capture 2020-11-14 14-10-36.txt       |  46 ++
+ .../CoolTerm Libs/Appearance Pakx64.dll            | Bin 0 -> 229552 bytes
+ .../CoolTermWin/CoolTerm Libs/Cryptox64.dll        | Bin 0 -> 463536 bytes
+ .../CoolTerm Libs/Internet Encodingsx64.dll        | Bin 0 -> 27312 bytes
+ .../CoolTermWin/CoolTerm Libs/RegExx64.dll         | Bin 0 -> 385200 bytes
+ .../CoolTermWin/CoolTerm Libs/XMLx64.dll           | Bin 0 -> 428208 bytes
+ .../CoolTermWin/CoolTerm Resources/AboutIcon.png   | Bin 0 -> 8295 bytes
+ .../CoolTerm Resources/AboutIcon@2x.png            | Bin 0 -> 25446 bytes
+ .../CoolTerm Resources/AutoScrollsmall.png         | Bin 0 -> 1639 bytes
+ .../CoolTerm Resources/AutoScrollsmall@2x.png      | Bin 0 -> 2299 bytes
+ .../CoolTerm Resources/AutoScrollsmall@3x.png      | Bin 0 -> 2774 bytes
+ .../CoolTerm Resources/CaptureTextsmall_Icon.png   | Bin 0 -> 1851 bytes
+ .../CaptureTextsmall_Icon@2x.png                   | Bin 0 -> 3053 bytes
+ .../CoolTermWin/CoolTerm Resources/Clear_Icon.png  | Bin 0 -> 2978 bytes
+ .../CoolTerm Resources/Clear_Icon@2x.png           | Bin 0 -> 8579 bytes
+ .../CoolTerm Resources/Clearsmall_Icon.png         | Bin 0 -> 1902 bytes
+ .../CoolTerm Resources/Clearsmall_Icon@2x.png      | Bin 0 -> 2978 bytes
+ .../CoolTerm Resources/Clearsmall_Icon@3x.png      | Bin 0 -> 5057 bytes
+ .../CoolTerm Resources/Closesmall_Icon.png         | Bin 0 -> 1992 bytes
+ .../CoolTerm Resources/Closesmall_Icon@2x.png      | Bin 0 -> 3821 bytes
+ .../CoolTerm Resources/Closesmall_Icon@3x.png      | Bin 0 -> 5682 bytes
+ .../CoolTerm Resources/Connect_Icon.png            | Bin 0 -> 2992 bytes
+ .../CoolTerm Resources/Connect_Icon@2x.png         | Bin 0 -> 5488 bytes
+ .../CoolTerm Resources/Connect_Icon@3x.png         | Bin 0 -> 6356 bytes
+ .../CoolTerm Resources/Connect_Icon_small.png      | Bin 0 -> 1567 bytes
+ .../CoolTerm Resources/Connect_Icon_small@2x.png   | Bin 0 -> 2135 bytes
+ .../CoolTerm Resources/Connect_Icon_small@3x.png   | Bin 0 -> 3521 bytes
+ .../CoolTerm Resources/CoolTerm_Icon_16x16.png     | Bin 0 -> 1886 bytes
+ .../CoolTerm Resources/CoolTerm_Icon_16x16@2x.png  | Bin 0 -> 2215 bytes
+ .../CoolTerm Resources/CoolTerm_Icon_16x16@3x.png  | Bin 0 -> 3242 bytes
+ .../CoolTerm Resources/Copysmall_Icon.png          | Bin 0 -> 1745 bytes
+ .../CoolTerm Resources/Copysmall_Icon@2x.png       | Bin 0 -> 2971 bytes
+ .../CoolTerm Resources/Cutsmall_Icon.png           | Bin 0 -> 1686 bytes
+ .../CoolTerm Resources/Cutsmall_Icon@2x.png        | Bin 0 -> 3095 bytes
+ .../CoolTerm Resources/Disconnect_Icon.png         | Bin 0 -> 3740 bytes
+ .../CoolTerm Resources/Disconnect_Icon@2x.png      | Bin 0 -> 7953 bytes
+ .../CoolTerm Resources/Disconnect_Icon@3x.png      | Bin 0 -> 12029 bytes
+ .../CoolTerm Resources/Disconnect_Icon_small.png   | Bin 0 -> 1904 bytes
+ .../Disconnect_Icon_small@2x.png                   | Bin 0 -> 2890 bytes
+ .../Disconnect_Icon_small@3x.png                   | Bin 0 -> 4881 bytes
+ .../CoolTermWin/CoolTerm Resources/DocIcon0.ico    | Bin 0 -> 381142 bytes
+ .../CoolTerm Resources/Flush_Icon_small.png        | Bin 0 -> 1701 bytes
+ .../CoolTerm Resources/Flush_Icon_small@2x.png     | Bin 0 -> 2346 bytes
+ .../CoolTerm Resources/Flush_Icon_small@3x.png     | Bin 0 -> 3737 bytes
+ .../CoolTermWin/CoolTerm Resources/Help Text.txt   | 477 ++++++++++++++
+ .../CoolTerm Resources/HelpSmall_Icon.png          | Bin 0 -> 2135 bytes
+ .../CoolTerm Resources/HelpSmall_Icon@2x.png       | Bin 0 -> 3596 bytes
+ .../CoolTerm Resources/HelpSmall_Icon@3x.png       | Bin 0 -> 6115 bytes
+ .../CoolTermWin/CoolTerm Resources/Help_Icon.png   | Bin 0 -> 3596 bytes
+ .../CoolTerm Resources/Help_Icon@2x.png            | Bin 0 -> 7730 bytes
+ .../CoolTerm Resources/Help_Icon@3x.png            | Bin 0 -> 13314 bytes
+ .../CoolTerm Resources/LineStatusActive.png        | Bin 0 -> 1934 bytes
+ .../CoolTerm Resources/LineStatusActive@2x.png     | Bin 0 -> 3171 bytes
+ .../CoolTerm Resources/LineStatusActive@3x.png     | Bin 0 -> 5156 bytes
+ .../CoolTerm Resources/LineStatusInactive.png      | Bin 0 -> 1886 bytes
+ .../CoolTerm Resources/LineStatusInactive@2x.png   | Bin 0 -> 2909 bytes
+ .../CoolTerm Resources/LineStatusInactive@3x.png   | Bin 0 -> 4826 bytes
+ .../CoolTerm Resources/LineStatusNone.png          | Bin 0 -> 1837 bytes
+ .../CoolTerm Resources/LineStatusNone@2x.png       | Bin 0 -> 2755 bytes
+ .../CoolTerm Resources/LineStatusNone@3x.png       | Bin 0 -> 4580 bytes
+ .../CoolTerm Resources/LineStatusRemoteOff.png     | Bin 0 -> 1888 bytes
+ .../CoolTerm Resources/LineStatusRemoteOff@2x.png  | Bin 0 -> 3067 bytes
+ .../CoolTerm Resources/LineStatusRemoteOff@3x.png  | Bin 0 -> 4718 bytes
+ .../CoolTerm Resources/LineStatusRemoteOn.png      | Bin 0 -> 1923 bytes
+ .../CoolTerm Resources/LineStatusRemoteOn@2x.png   | Bin 0 -> 3110 bytes
+ .../CoolTerm Resources/LineStatusRemoteOn@3x.png   | Bin 0 -> 5011 bytes
+ .../CoolTermWin/CoolTerm Resources/New_Icon.png    | Bin 0 -> 1782 bytes
+ .../CoolTermWin/CoolTerm Resources/New_Icon@2x.png | Bin 0 -> 2823 bytes
+ .../CoolTerm Resources/Newsmall_Icon.png           | Bin 0 -> 1489 bytes
+ .../CoolTerm Resources/Newsmall_Icon@2x.png        | Bin 0 -> 1782 bytes
+ .../CoolTerm Resources/Newsmall_Icon@3x.png        | Bin 0 -> 2160 bytes
+ .../CoolTerm Resources/OpenFile_Icon.png           | Bin 0 -> 3317 bytes
+ .../CoolTerm Resources/OpenFile_Icon@2x.png        | Bin 0 -> 7498 bytes
+ .../CoolTerm Resources/OpenFile_Icon@3x.png        | Bin 0 -> 14063 bytes
+ .../CoolTerm Resources/OpenFilesmall_Icon.png      | Bin 0 -> 1835 bytes
+ .../CoolTerm Resources/OpenFilesmall_Icon@2x.png   | Bin 0 -> 3317 bytes
+ .../CoolTerm Resources/Options_Icon.png            | Bin 0 -> 3692 bytes
+ .../CoolTerm Resources/Options_Icon@2x.png         | Bin 0 -> 7550 bytes
+ .../CoolTerm Resources/Options_Icon@3x.png         | Bin 0 -> 12708 bytes
+ .../CoolTerm Resources/Optionssmall_Icon.png       | Bin 0 -> 1959 bytes
+ .../CoolTerm Resources/Optionssmall_Icon@2x.png    | Bin 0 -> 3082 bytes
+ .../CoolTerm Resources/Optionssmall_Icon@3x.png    | Bin 0 -> 4352 bytes
+ .../CoolTerm Resources/Pastesmall_Icon.png         | Bin 0 -> 1735 bytes
+ .../CoolTerm Resources/Pastesmall_Icon@2x.png      | Bin 0 -> 2880 bytes
+ .../PauseRecordingsmall_Icon.png                   | Bin 0 -> 1639 bytes
+ .../PauseRecordingsmall_Icon@2x.png                | Bin 0 -> 2299 bytes
+ .../PauseRecordingsmall_Icon@3x.png                | Bin 0 -> 3503 bytes
+ .../CoolTerm Resources/Preferencessmall_Icon.png   | Bin 0 -> 1814 bytes
+ .../Preferencessmall_Icon@2x.png                   | Bin 0 -> 2537 bytes
+ .../Preferencessmall_Icon@3x.png                   | Bin 0 -> 3534 bytes
+ .../CoolTerm Resources/Printsmall_Icon.png         | Bin 0 -> 1660 bytes
+ .../CoolTerm Resources/Printsmall_Icon@2x.png      | Bin 0 -> 2448 bytes
+ .../CoolTermWin/CoolTerm Resources/Resetsmall.png  | Bin 0 -> 2006 bytes
+ .../CoolTerm Resources/Resetsmall@2x.png           | Bin 0 -> 3515 bytes
+ .../CoolTermWin/CoolTerm Resources/Resources.sdef  | 204 ++++++
+ .../CoolTerm Resources/SaveFileAssmall_Icon.png    | Bin 0 -> 1902 bytes
+ .../CoolTerm Resources/SaveFileAssmall_Icon@2x.png | Bin 0 -> 3140 bytes
+ .../CoolTerm Resources/SaveFile_Icon.png           | Bin 0 -> 2596 bytes
+ .../CoolTerm Resources/SaveFile_Icon@2x.png        | Bin 0 -> 3105 bytes
+ .../CoolTerm Resources/SaveFile_Icon@3x.png        | Bin 0 -> 3568 bytes
+ .../CoolTerm Resources/SaveFilesmall_Icon.png      | Bin 0 -> 1772 bytes
+ .../CoolTerm Resources/SaveFilesmall_Icon@2x.png   | Bin 0 -> 2469 bytes
+ .../CoolTerm Resources/SendBreak_small.png         | Bin 0 -> 1676 bytes
+ .../CoolTerm Resources/SendBreak_small@2x.png      | Bin 0 -> 2518 bytes
+ .../CoolTerm Resources/SendBreak_small@3x.png      | Bin 0 -> 4219 bytes
+ .../CoolTerm Resources/SendStringSmall_Icon.png    | Bin 0 -> 1567 bytes
+ .../CoolTerm Resources/SendStringSmall_Icon@2x.png | Bin 0 -> 2181 bytes
+ .../CoolTerm Resources/SendStringSmall_Icon@3x.png | Bin 0 -> 2447 bytes
+ .../CoolTerm Resources/SendTextDone.wav            | Bin 0 -> 42430 bytes
+ .../CoolTerm Resources/SendTextsmall_Icon.png      | Bin 0 -> 1833 bytes
+ .../CoolTerm Resources/SendTextsmall_Icon@2x.png   | Bin 0 -> 3090 bytes
+ .../CoolTermWin/CoolTerm Resources/SplashIcon.png  | Bin 0 -> 25446 bytes
+ .../CoolTerm Resources/SplashIcon@2x.png           | Bin 0 -> 85744 bytes
+ .../CoolTerm Resources/SplashIcon@3x.png           | Bin 0 -> 188299 bytes
+ .../StartRecordingsmall_Icon.png                   | Bin 0 -> 1955 bytes
+ .../StartRecordingsmall_Icon@2x.png                | Bin 0 -> 3027 bytes
+ .../StartRecordingsmall_Icon@3x.png                | Bin 0 -> 5162 bytes
+ .../CoolTerm Resources/StopRecordingsmall_Icon.png | Bin 0 -> 1610 bytes
+ .../StopRecordingsmall_Icon@2x.png                 | Bin 0 -> 2203 bytes
+ .../StopRecordingsmall_Icon@3x.png                 | Bin 0 -> 3061 bytes
+ .../CoolTerm Resources/TerminalBeep.wav            | Bin 0 -> 3088 bytes
+ .../CoolTermWin/CoolTerm Resources/Timestamp.png   | Bin 0 -> 1892 bytes
+ .../CoolTerm Resources/Timestamp@2x.png            | Bin 0 -> 2872 bytes
+ .../CoolTerm Resources/Timestamp@3x.png            | Bin 0 -> 3867 bytes
+ .../CoolTerm Resources/Undosmall_Icon.png          | Bin 0 -> 1759 bytes
+ .../CoolTerm Resources/Undosmall_Icon@2x.png       | Bin 0 -> 2405 bytes
+ .../CoolTerm Resources/ViewerASCII_Icon.png        | Bin 0 -> 2489 bytes
+ .../CoolTerm Resources/ViewerASCII_Icon@2x.png     | Bin 0 -> 4295 bytes
+ .../CoolTerm Resources/ViewerASCII_Icon@3x.png     | Bin 0 -> 6619 bytes
+ .../CoolTerm Resources/ViewerASCIIsmall_Icon.png   | Bin 0 -> 1726 bytes
+ .../ViewerASCIIsmall_Icon@2x.png                   | Bin 0 -> 2318 bytes
+ .../ViewerASCIIsmall_Icon@3x.png                   | Bin 0 -> 3093 bytes
+ .../CoolTerm Resources/ViewerHEX_Icon.png          | Bin 0 -> 2515 bytes
+ .../CoolTerm Resources/ViewerHEX_Icon@2x.png       | Bin 0 -> 3902 bytes
+ .../CoolTerm Resources/ViewerHEX_Icon@3x.png       | Bin 0 -> 5956 bytes
+ .../CoolTerm Resources/ViewerHEXsmall_Icon.png     | Bin 0 -> 1645 bytes
+ .../CoolTerm Resources/ViewerHEXsmall_Icon@2x.png  | Bin 0 -> 2090 bytes
+ .../CoolTerm Resources/ViewerHEXsmall_Icon@3x.png  | Bin 0 -> 2754 bytes
+ .../CoolTermWin/CoolTerm Resources/WrapText.png    | Bin 0 -> 1632 bytes
+ .../CoolTermWin/CoolTerm Resources/WrapText@2x.png | Bin 0 -> 2088 bytes
+ .../CoolTermWin/CoolTerm Resources/WrapText@3x.png | Bin 0 -> 2741 bytes
+ .../CoolTermWin/CoolTerm Resources/ct_error.html   |  17 +
+ .../CoolTermWin/CoolTerm Resources/ct_form.html    | 366 +++++++++++
+ .../CoolTermWin/CoolTerm Resources/ct_success.html |  17 +
+ .../CoolTermWin/CoolTerm Resources/mwx.png         | Bin 0 -> 4375 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx@2x.png      | Bin 0 -> 8589 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx@3x.png      | Bin 0 -> 22862 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx_dm.png      | Bin 0 -> 6625 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx_dm@2x.png   | Bin 0 -> 16763 bytes
+ .../CoolTermWin/CoolTerm Resources/mwx_dm@3x.png   | Bin 0 -> 28338 bytes
+ Arduino/CoolTermWin/CoolTermWin/CoolTerm.exe       | Bin 0 -> 6370816 bytes
+ Arduino/CoolTermWin/CoolTermWin/ReadMe.txt         | 506 ++++++++++++++
+ .../CoolTermWin/Scripting/Python/.DS_Store         | Bin 0 -> 8196 bytes
+ .../CoolTermWin/Scripting/Python/CoolTerm.py       | 725 +++++++++++++++++++++
+ .../Scripting/Python/Examples/.DS_Store            | Bin 0 -> 6148 bytes
+ .../Python/Examples/Example 1 - Introduction.py    |  53 ++
+ .../Examples/Example 10 - Sending a text file.py   |  37 ++
+ ...11 - Controlling CoolTerm from serial target.py |  83 +++
+ .../Example 2 - Loading Connection Settings.py     |  25 +
+ ...ple 3 - Capture received data to a text file.py |  44 ++
+ ...mple 4 - Send received characters to console.py |  49 ++
+ .../Example 5 - Responding to received data.py     |  59 ++
+ .../Python/Examples/Example 6 - Toggle DTR.py      |  40 ++
+ .../Examples/Example 7 - Select Serial Port.py     |  43 ++
+ .../Python/Examples/Example 8 - Datalogging.py     |  89 +++
+ .../Python/Examples/Example 9 - Macro Buttons.py   |  68 ++
+ .../Scripting/Remote Control Socket Protocol.pdf   | Bin 0 -> 315106 bytes
+ .../CoolTermWin/Scripting/Scripting ReadMe.txt     |  36 +
+ .../CoolTermWin/Windows System Requirements.txt    |  17 +
+ .../CoolTermWin/CoolTermWin/XojoGUIFramework64.dll | Bin 0 -> 4258992 bytes
+ Arduino/CoolTermWin/CoolTermWin/icudt65.dll        | Bin 0 -> 27980288 bytes
+ Arduino/CoolTermWin/CoolTermWin/icuin65.dll        | Bin 0 -> 2573824 bytes
+ Arduino/CoolTermWin/CoolTermWin/icuuc65.dll        | Bin 0 -> 1815040 bytes
+ Arduino/CoolTermWin/CoolTermWin/msvcp120.dll       | Bin 0 -> 660128 bytes
+ Arduino/CoolTermWin/CoolTermWin/msvcp140.dll       | Bin 0 -> 639656 bytes
+ Arduino/CoolTermWin/CoolTermWin/msvcr120.dll       | Bin 0 -> 963232 bytes
+ Arduino/CoolTermWin/CoolTermWin/vccorlib140.dll    | Bin 0 -> 395440 bytes
+ Arduino/CoolTermWin/CoolTermWin/vcruntime140.dll   | Bin 0 -> 89272 bytes
+ .../LiquidCrystal_I2C.cpp                          | 257 ++++++++
+ .../LiquidCrystal_I2C.h                            | 165 +++++
+ .../README.md                                      |   9 +
+ .../examples/BlinkingCursor/BlinkingCursor.ino     |  32 +
+ .../examples/CustomChars/CustomChars.ino           |  65 ++
+ .../examples/HelloWorld/HelloWorld.ino             |  20 +
+ .../examples/SerialDisplay/SerialDisplay.ino       |  34 +
+ .../keywords.txt                                   |  46 ++
+ Arduino/Functional/keypadAndLed/keypadAndLed.ino   | 121 ++++
+ Arduino/LCD with potentiometer/LCD.ino/LCD.ino.ino |  25 +
+ Arduino/ttt/ttt.ino                                |  27 +
+ SalaA1.txt                                         |   4 +
+ Untitled_0.stc                                     |  79 +++
+ src/SalaA1.txt                                     |   3 +
+ 195 files changed, 4070 insertions(+), 44 deletions(-)
+
+commit 5c5699a6c67262f50e62497273f207afde78e42b
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Nov 7 11:25:18 2020 +0200
+
+    Proiectul momentan e bun. Trebuie vazuta partea de arduino!
+
+ .classpath                                         |   15 +
+ .idea/dictionaries/levente_gergelyfi.xml           |    8 +
+ .idea/misc.xml                                     |    6 +
+ .idea/modules.xml                                  |    8 +
+ .idea/php.xml                                      |   32 +
+ .idea/sqldialects.xml                              |    7 +
+ .idea/workspace.xml                                |  134 +
+ .project                                           |   17 +
+ .settings/org.eclipse.jdt.core.prefs               |   12 +
+ Arduino/ARDUINO TRYING/BLUETOOTH/oc/oc.ino         |   28 +
+ Arduino/ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino |   43 +
+ .../ARDUINO TRYING/BLUETOOTH/prim.ino/prim.ino.ino |   44 +
+ Arduino/ARDUINO TRYING/LCD_code/LCD_code.ino       |   17 +
+ Arduino/ARDUINO TRYING/LCDyalaTAST/LCDyalaTAST.ino |   78 +
+ .../LCDyalaTAST/sketch_mar04b/sketch_mar04b.ino    |   42 +
+ Arduino/ARDUINO TRYING/probaYala/LCD/LCD.ino       |   21 +
+ Arduino/ARDUINO TRYING/probaYala/probaYala.ino     |   16 +
+ Arduino/ARDUINO TRYING/sketch_apr03a.ino           |   41 +
+ Arduino/ARDUINO/arduino/arduino.ino                |   56 +
+ History_A1.html                                    |   47 +
+ History_A321.html                                  |   87 +
+ History_B521.html                                  |   81 +
+ OTHER POSSIBLE UPGRADES/SendMail-master.zip        |  Bin 0 -> 548834 bytes
+ OTHER POSSIBLE UPGRADES/javax.mail.jar             |  Bin 0 -> 659033 bytes
+ OTHER POSSIBLE UPGRADES/robojax-Keypad.zip         |  Bin 0 -> 18450 bytes
+ Proiect_PMD.iml                                    |   11 +
+ bin/Badge.class                                    |  Bin 0 -> 1011 bytes
+ bin/Client.class                                   |  Bin 0 -> 3512 bytes
+ bin/Keyboard.class                                 |  Bin 0 -> 769 bytes
+ bin/Operation.class                                |  Bin 0 -> 3857 bytes
+ bin/PHP/add.inc.php                                |   15 +
+ bin/PHP/addroom.inc.php                            |   15 +
+ bin/PHP/dbh.inc.php                                |   12 +
+ bin/PHP/dbhr.inc.php                               |   12 +
+ bin/PHP/history.inc.php                            |   19 +
+ bin/PHP/password-hist.inc.php                      |   23 +
+ bin/PHP/removeEmployee.inc.php                     |   14 +
+ bin/PHP/removeRoom.inc.php                         |   14 +
+ bin/Room.class                                     |  Bin 0 -> 768 bytes
+ bin/WEB/Admin add employee.html                    |   97 +
+ bin/WEB/Admin add room.html                        |   96 +
+ bin/WEB/Admin page.html                            |  115 +
+ bin/WEB/Admin remove employee.html                 |   96 +
+ bin/WEB/Admin remove room.html                     |   94 +
+ bin/WEB/Main menu.html                             |   74 +
+ bin/WEB/manager-page.html                          |   96 +
+ bin/WEB/password-db.html                           |   95 +
+ bin/WEB/password-hist.html                         |   95 +
+ bin/css/bootstrap.css                              | 6800 ++++++++++++++++++++
+ bin/css/bootstrap.min.css                          |    5 +
+ bin/css/custom.css                                 |    1 +
+ bin/css/et-line-icons.css                          |  343 +
+ bin/css/flexslider.css                             |  261 +
+ bin/css/font-awesome.min.css                       |    4 +
+ bin/css/font-dosis.css                             |    1 +
+ bin/css/font-georgia.css                           |    2 +
+ bin/css/font-montserrat.css                        |    1 +
+ bin/css/font-opensans.css                          |    1 +
+ bin/css/font-oswald.css                            |    1 +
+ bin/css/font-pathway.css                           |    2 +
+ bin/css/font-poppins.css                           |    1 +
+ bin/css/font-roboto.css                            |    1 +
+ bin/css/font-robotocondensed.css                   |    3 +
+ bin/css/font-titillium.css                         |    1 +
+ bin/css/lightbox.min.css                           |    1 +
+ bin/css/pe-icon-7-stroke.css                       |  632 ++
+ bin/css/theme-chipotle.css                         | 5712 ++++++++++++++++
+ bin/css/theme-fire.css                             | 5712 ++++++++++++++++
+ bin/css/theme-gunmetal.css                         | 5712 ++++++++++++++++
+ bin/css/theme-hyperblue.css                        | 5712 ++++++++++++++++
+ bin/css/theme-nature.css                           | 5712 ++++++++++++++++
+ bin/css/theme-navy.css                             | 5712 ++++++++++++++++
+ bin/css/theme-nearblack.css                        | 5712 ++++++++++++++++
+ bin/css/theme-offyellow.css                        | 5712 ++++++++++++++++
+ bin/css/theme-orange.css                           | 5712 ++++++++++++++++
+ bin/css/theme-purple.css                           | 5712 ++++++++++++++++
+ bin/css/theme-red.css                              | 5712 ++++++++++++++++
+ bin/css/theme-rose.css                             | 4937 ++++++++++++++
+ bin/css/theme-startup.css                          | 5712 ++++++++++++++++
+ bin/css/theme.css                                  | 5712 ++++++++++++++++
+ bin/css/themify-icons.css                          | 1081 ++++
+ bin/css/ytplayer.css                               |  217 +
+ bin/js/bootstrap.js                                | 2363 +++++++
+ bin/js/bootstrap.min.js                            |    7 +
+ bin/js/countdown.min.js                            |   22 +
+ bin/js/flexslider.min.js                           |    1 +
+ bin/js/flickr.js                                   |   43 +
+ bin/js/jquery.min.js                               |    4 +
+ bin/js/lightbox.min.js                             |    9 +
+ bin/js/masonry.min.js                              |    9 +
+ bin/js/parallax.js                                 |    1 +
+ bin/js/scripts.js                                  | 1389 ++++
+ bin/js/smooth-scroll.min.js                        |   24 +
+ bin/js/spectragram.min.js                          |    1 +
+ bin/js/twitterfetcher.min.js                       |   63 +
+ bin/js/ytplayer.min.js                             |    1 +
+ src/Badge.java                                     |   36 +
+ src/Client.java                                    |   92 +
+ src/Keyboard.java                                  |   11 +
+ src/Operation.java                                 |  100 +
+ src/PHP/add.inc.php                                |   15 +
+ src/PHP/addroom.inc.php                            |   15 +
+ src/PHP/dbh.inc.php                                |   12 +
+ src/PHP/dbhr.inc.php                               |   12 +
+ src/PHP/history.inc.php                            |   19 +
+ src/PHP/password-hist.inc.php                      |   23 +
+ src/PHP/removeEmployee.inc.php                     |   14 +
+ src/PHP/removeRoom.inc.php                         |   14 +
+ src/Room.java                                      |   30 +
+ src/WEB/Admin add employee.html                    |   97 +
+ src/WEB/Admin add room.html                        |   96 +
+ src/WEB/Admin page.html                            |  115 +
+ src/WEB/Admin remove employee.html                 |   96 +
+ src/WEB/Admin remove room.html                     |   94 +
+ src/WEB/Main menu.html                             |   74 +
+ src/WEB/manager-page.html                          |   96 +
+ src/WEB/password-db.html                           |   95 +
+ src/WEB/password-hist.html                         |   95 +
+ src/css/bootstrap.css                              | 6800 ++++++++++++++++++++
+ src/css/bootstrap.min.css                          |    5 +
+ src/css/custom.css                                 |    1 +
+ src/css/et-line-icons.css                          |  343 +
+ src/css/flexslider.css                             |  261 +
+ src/css/font-awesome.min.css                       |    4 +
+ src/css/font-dosis.css                             |    1 +
+ src/css/font-georgia.css                           |    2 +
+ src/css/font-montserrat.css                        |    1 +
+ src/css/font-opensans.css                          |    1 +
+ src/css/font-oswald.css                            |    1 +
+ src/css/font-pathway.css                           |    2 +
+ src/css/font-poppins.css                           |    1 +
+ src/css/font-roboto.css                            |    1 +
+ src/css/font-robotocondensed.css                   |    3 +
+ src/css/font-titillium.css                         |    1 +
+ src/css/lightbox.min.css                           |    1 +
+ src/css/pe-icon-7-stroke.css                       |  632 ++
+ src/css/theme-chipotle.css                         | 5712 ++++++++++++++++
+ src/css/theme-fire.css                             | 5712 ++++++++++++++++
+ src/css/theme-gunmetal.css                         | 5712 ++++++++++++++++
+ src/css/theme-hyperblue.css                        | 5712 ++++++++++++++++
+ src/css/theme-nature.css                           | 5712 ++++++++++++++++
+ src/css/theme-navy.css                             | 5712 ++++++++++++++++
+ src/css/theme-nearblack.css                        | 5712 ++++++++++++++++
+ src/css/theme-offyellow.css                        | 5712 ++++++++++++++++
+ src/css/theme-orange.css                           | 5712 ++++++++++++++++
+ src/css/theme-purple.css                           | 5712 ++++++++++++++++
+ src/css/theme-red.css                              | 5712 ++++++++++++++++
+ src/css/theme-rose.css                             | 4937 ++++++++++++++
+ src/css/theme-startup.css                          | 5712 ++++++++++++++++
+ src/css/theme.css                                  | 5712 ++++++++++++++++
+ src/css/themify-icons.css                          | 1081 ++++
+ src/css/ytplayer.css                               |  217 +
+ src/js/bootstrap.js                                | 2363 +++++++
+ src/js/bootstrap.min.js                            |    7 +
+ src/js/countdown.min.js                            |   22 +
+ src/js/flexslider.min.js                           |    1 +
+ src/js/flickr.js                                   |   43 +
+ src/js/jquery.min.js                               |    4 +
+ src/js/lightbox.min.js                             |    9 +
+ src/js/masonry.min.js                              |    9 +
+ src/js/parallax.js                                 |    1 +
+ src/js/scripts.js                                  | 1389 ++++
+ src/js/smooth-scroll.min.js                        |   24 +
+ src/js/spectragram.min.js                          |    1 +
+ src/js/twitterfetcher.min.js                       |   63 +
+ src/js/ytplayer.min.js                             |    1 +
+ 166 files changed, 188062 insertions(+)
+
+commit da8e0a4f0857557c7a911de321d3184b06f0a3c7
+Author: Livante <48677088+Livante@users.noreply.github.com>
+Date:   Sat Nov 7 11:24:08 2020 +0200
+
+    first commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
