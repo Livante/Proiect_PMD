@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Preparing to connect 2 relays">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PHP/add.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/add.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/Admin add employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin add employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/Admin add room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin add room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/Admin remove employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin remove employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/Admin remove room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/Admin remove room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/manager-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/manager-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/password-db.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-db.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/password-hist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-hist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +128,9 @@
       <workItem from="1614447999998" duration="384000" />
       <workItem from="1614448396006" duration="260000" />
       <workItem from="1614448668835" duration="1814000" />
-      <workItem from="1614450714975" duration="1361000" />
+      <workItem from="1614450714975" duration="1608000" />
+      <workItem from="1615294840689" duration="1220000" />
+      <workItem from="1615632985543" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -167,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613832109031</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
+      <created>1614452242451</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614452242451</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Trying sendByteImmediately" />
     <MESSAGE value="Preparing to connect 2 relays" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparing to connect 2 relays" />
+    <MESSAGE value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
   </component>
 </project>
