@@ -13,7 +13,8 @@ public class Operation {
 	
 	public List <Room> roomList= new ArrayList <Room>();
 	public List <Badge> badgeList= new ArrayList <Badge>();
-	public List <History> historyList= new ArrayList <History>();
+//	public List <History> historyList= new ArrayList <History>();
+	public List <History> historyList;
 	private boolean accessFlag=false;
 	
 	public boolean isAccessFlag() {
