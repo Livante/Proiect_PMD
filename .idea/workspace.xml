@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_18_bin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PHP/dbhist.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/WEB/Main menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/bin/WEB/Main menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Badge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Badge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proiect_PMD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proiect_PMD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/history.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/history.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WEB/manager-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/manager-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +36,14 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -50,7 +59,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jSerialComm-2.6.2.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-5.1.18-bin.jar" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -65,6 +75,19 @@
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.Client" />
       <module name="Proiect_PMD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,6 +166,12 @@
       <workItem from="1615634790600" duration="1539000" />
       <workItem from="1615636582773" duration="1848000" />
       <workItem from="1615638448165" duration="600000" />
+      <workItem from="1615648676797" duration="171000" />
+      <workItem from="1615745410005" duration="26000" />
+      <workItem from="1616262252735" duration="576000" />
+      <workItem from="1616322267258" duration="1544000" />
+      <workItem from="1616323823635" duration="8484000" />
+      <workItem from="1616332526666" duration="10601000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -216,5 +245,8 @@
     <MESSAGE value="Preparing to connect 2 relays" />
     <MESSAGE value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Proiect_PMD$Client.ic" NAME="Client Coverage Results" MODIFIED="1616337811074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
