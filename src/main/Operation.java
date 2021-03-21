@@ -61,8 +61,9 @@ public class Operation {
 			}
 		} else {
 			accessFlag = false;
-			System.out.println("NON EXISTENT EMPLOYEE");
-			History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, "NON EXISTENT", Integer.parseInt(badgeCode), Client.NON_EXISTENT_EMPLOYEE);
+			function="Non existent";
+			System.out.println("\n\n\n\nAAAAAAICIIII"+sala+" "+function+" "+badgeCode+"\n\n\n\n");
+			History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, function, Integer.parseInt(badgeCode), Client.NON_EXISTENT_EMPLOYEE);
 		}
 
 	}

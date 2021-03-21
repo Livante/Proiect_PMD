@@ -3,12 +3,11 @@ package main;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Calendar;
 import java.util.Date;
+import java.sql.*;
 public class History {
 
 	private String roomId; 
@@ -83,32 +82,16 @@ public class History {
 		try {
 			
 		if (database.contains("history")) {
-			Calendar calendar = Calendar.getInstance();
-			Date date=new Date();
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn = null;
 			conn = DriverManager.getConnection(database, "root", "");
-			
-			System.out.println(roomId+" "+function+" "+badgeCode+" "+verdict+" "+date);
-			String query = " insert into history (roomId, function, badgeCode, accessDate, verdict)"
-					+ " values (?, ?, ?, ?, ?, ?)";
-			PreparedStatement preparedStmt = conn.prepareStatement(query);
-//			preparedStmt.setString(2, roomId);
-//			preparedStmt.setString(3, function);
-//			preparedStmt.setInt(4, badgeCode);
-//			preparedStmt.setDate(5, (java.sql.Date) date);
-//			preparedStmt.setString(6, verdict);
-//			
-			preparedStmt.setString(1, roomId);
-			preparedStmt.setString(2, function);
-			preparedStmt.setInt(3, badgeCode);
-			preparedStmt.setDate(4, (java.sql.Date) date);
-			preparedStmt.setString(5, verdict);
-			
-			
-			preparedStmt.executeUpdate(query);
-		
-			conn.close();
+            Statement st = conn.createStatement(); 
+            Date utilDate = new Date();
+            Timestamp sqlTS = new Timestamp(utilDate.getTime());
+            System.out.println(sqlTS);
+            st.executeUpdate("INSERT INTO history (roomId,function,badgeCode,accessDate,verdict) " + 
+                "VALUES (\'"+roomId+"\',\'"+function+"\',"+badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')"); 
+            conn.close(); 
 		}
 		
 		}catch(Exception e) {}
