@@ -21,6 +21,10 @@ if (isset($_POST['search'])) {
     $search_result = filterTable($query);
 }
 
+if (isset($_POST['reset'])) {
+    $query = "SELECT * FROM history;";
+    $search_result = filterTable($query);
+}
 // function to connect and execute the query
 function filterTable($query)
 {
@@ -74,6 +78,8 @@ function filterTable($query)
                     <option value="Access Denied">Access Denied</option>
                 </select>
                 <input type="submit" name="search" value="Filter"><br><br>
+
+                <input type="submit" name="reset" value="Reset filters"><br><br>
 
                 <table class="col-sm-10 col-sm-offset-1">
                     <tr>

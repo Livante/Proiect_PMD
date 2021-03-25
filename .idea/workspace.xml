@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_18_bin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PHP/dbhist.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proiect_PMD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proiect_PMD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PHP/history.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/history.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/manager-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/manager-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,19 +66,6 @@
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.Client" />
       <module name="Proiect_PMD" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,6 +150,7 @@
       <workItem from="1616322267258" duration="1544000" />
       <workItem from="1616323823635" duration="8484000" />
       <workItem from="1616332526666" duration="10601000" />
+      <workItem from="1616663661218" duration="535000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
