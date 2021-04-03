@@ -90,7 +90,8 @@ public class History {
             Timestamp sqlTS = new Timestamp(utilDate.getTime());
             System.out.println(sqlTS);
             st.executeUpdate("INSERT INTO history (roomId,function,badgeCode,accessDate,verdict) " + 
-                "VALUES (\'"+roomId+"\',\'"+function+"\',"+badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')"); 
+                "VALUES (\'"+roomId+"\',\'"+function+"\',"+badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')");
+            st.executeUpdate("Delete from history where TIMESTAMPADD(year,2,accessDate) < CURRENT_TIMESTAMP");
             conn.close(); 
 		}
 		
