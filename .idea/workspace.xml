@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/password-hist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-hist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,18 +81,6 @@
   </component>
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -223,6 +215,12 @@
     <MESSAGE value="Preparing to connect 2 relays" />
     <MESSAGE value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1252" y="237" width="583" height="566" key="find.popup" timestamp="1617454175459">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1252" y="237" width="583" height="566" key="find.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617454175459" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Proiect_PMD$Client.ic" NAME="Client Coverage Results" MODIFIED="1616337811074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
