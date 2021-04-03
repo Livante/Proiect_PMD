@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration">
+    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/PHP/historyEven.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PHP/historyOdd.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PHP/password-hist.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/history.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/history.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WEB/password-hist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-hist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/History.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +161,10 @@
       <workItem from="1616323823635" duration="8484000" />
       <workItem from="1616332526666" duration="10601000" />
       <workItem from="1616663661218" duration="1533000" />
+      <workItem from="1617456771062" duration="283000" />
+      <workItem from="1617457116195" duration="1767000" />
+      <workItem from="1617458941606" duration="45000" />
+      <workItem from="1617459307371" duration="4702000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -222,7 +233,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -245,10 +256,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated Web pages, trying to send&#10;manager code" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1336" y="0" key="CommitChangelistDialog2" timestamp="1617455754300">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1617465210888">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1617465210888" />
     <state x="-1336" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617455754300" />
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1617463225944">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1617463225944" />
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1617455759565">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
