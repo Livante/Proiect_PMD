@@ -10,19 +10,20 @@ if (isset($_POST['search'])) {
     $endDate = substr($accessDate, 22, 5) . substr($accessDate, 27, 3) . substr($accessDate, 30, 3) . substr($accessDate, 33, 9);
     // search in all table columns
     // using concat mysql function
-    $query = "SELECT * FROM history WHERE `roomId` LIKE '%" . $roomId . "%' AND `function` LIKE '%" . $function . "%' 
+    $check=intval(substr($roomId,strlen($roomId)-1,1));
+    $query = "SELECT * FROM history WHERE `roomId` LIKE '%" . $roomId . "%' AND MOD($check,2)=1 AND `function` LIKE '%" . $function . "%' 
     AND `badgeCode` LIKE '%" . $badgeCode . "%' 
     AND (`accessDate` BETWEEN '" . $startDate . "' AND '" . $endDate . "')
     AND `verdict` LIKE '%" . $verdict . "%';";
     $search_result = filterTable($query);
 
 } else {
-    $query = "SELECT * FROM history;";
+    $query = "SELECT * FROM history WHERE MOD(SUBSTRING(`roomId`,LENGTH(`roomId`),1),2)=1;";
     $search_result = filterTable($query);
 }
 
 if (isset($_POST['reset'])) {
-    $query = "SELECT * FROM history;";
+    $query = "SELECT * FROM history WHERE MOD(SUBSTRING(`roomId`,LENGTH(`roomId`),1),2)=1;";
     $search_result = filterTable($query);
 }
 // function to connect and execute the query
@@ -61,7 +62,7 @@ function filterTable($query)
 <div class="main-container">
     <section class="bg-primary">
         <div class="col-sm-6 col-sm-offset-3">
-            <form action="history.inc.php" method="post">
+            <form action="historyOdd.inc.php" method="post">
                 <input type="text" name="roomId"
                        minlength="2" maxlength="4" size="10" target="_blank"
                        class="mb0 transparent validate-require" placeholder="ROOM CODE...">
@@ -77,7 +78,7 @@ function filterTable($query)
                     <option value="Access Granted">Access Granted</option>
                     <option value="Access Denied">Access Denied</option>
                 </select>
-                <input type="submit" name="search" value="Filter"><br><br>
+                <input type="submit" name="search" value="Filter ODD"><br><br>
 
                 <input type="submit" name="reset" value="Reset filters"><br><br>
 

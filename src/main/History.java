@@ -10,12 +10,12 @@ import java.util.Date;
 import java.sql.*;
 public class History {
 
-	private String roomId; 
+	private String roomId;
 	private String function;
 	private int badgeCode;
-	private Date accessDate; 
+	private Date accessDate;
 	private String verdict;
-	
+
 	public History(String roomId, String function, int badgeCode, Date accessDate, String verdict) {
 		this.roomId=roomId;
 		this.function=function;
@@ -63,7 +63,7 @@ public class History {
 	public void setVerdict(String verdict) {
 		this.verdict = verdict;
 	}
-	
+
 	public static void connectToDatabase(Operation op, String database) throws ClassNotFoundException, SQLException, IOException {
 		if (database.contains("history")) {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -77,23 +77,24 @@ public class History {
 			conn.close();
 		}
 	}
-	
+
 	public static void writeInDb(Operation op, String database, String roomId, String function, int badgeCode, String verdict) {
 		try {
-			
-		if (database.contains("history")) {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = null;
-			conn = DriverManager.getConnection(database, "root", "");
-            Statement st = conn.createStatement(); 
-            Date utilDate = new Date();
-            Timestamp sqlTS = new Timestamp(utilDate.getTime());
-            System.out.println(sqlTS);
-            st.executeUpdate("INSERT INTO history (roomId,function,badgeCode,accessDate,verdict) " + 
-                "VALUES (\'"+roomId+"\',\'"+function+"\',"+badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')"); 
-            conn.close(); 
-		}
-		
+
+			if (database.contains("history")) {
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection conn = null;
+				conn = DriverManager.getConnection(database, "root", "");
+				Statement st = conn.createStatement();
+				Date utilDate = new Date();
+				Timestamp sqlTS = new Timestamp(utilDate.getTime());
+				System.out.println(sqlTS);
+				st.executeUpdate("INSERT INTO history (roomId,function,badgeCode,accessDate,verdict) " +
+						"VALUES (\'"+roomId+"\',\'"+function+"\',"+badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')");
+				st.executeUpdate("Delete from history where TIMESTAMPADD(year,2,accessDate) < CURRENT_TIMESTAMP");
+				conn.close();
+			}
+
 		}catch(Exception e) {}
 	}
 }
