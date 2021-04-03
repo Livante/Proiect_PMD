@@ -1,5 +1,6 @@
 <?php
-$code_value = $_POST['code'];
+$code = isset($_POST['code']) ? $_POST['code'] : "";
+echo "Code: ".$code;
 
 if (isset($_POST['search'])) {
     $roomId = $_POST['roomId'];
