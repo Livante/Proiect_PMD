@@ -70,7 +70,7 @@ function filterTable($query)
                 <input type="text" name="badgeCode"
                        minlength="4" maxlength="4" size="10" class="mb0 transparent validate-require"
                        placeholder="EMPLOYEE CODE...">
-                <input type="text" name="accessDate" class="mb0 transparent validate-require" autocomplete="off" required
+                <input type="text" name="accessDate" class="mb0 transparent validate-require" autocomplete="off"
                        placeholder="ACCESS DATE...">
                 <select name="verdict" id="verdict" class="mb0 transparent validate-require">
                     <option value=" "></option>

@@ -1,8 +1,8 @@
 <?php
 
 
-$code = $_POST['code'];
-$codedb = $_POST['codedb'];
+$code = $_POST['code'] ?? null;
+$codedb = $_POST['codedb'] ?? null;
 
 
 if ($code == "123456") {

@@ -10,8 +10,7 @@ if (isset($_POST['search'])) {
     $endDate = substr($accessDate, 22, 5) . substr($accessDate, 27, 3) . substr($accessDate, 30, 3) . substr($accessDate, 33, 9);
     // search in all table columns
     // using concat mysql function
-    $check=intval(substr($roomId,strlen($roomId)-1,1));
-    $query = "SELECT * FROM history WHERE `roomId` LIKE '%" . $roomId . "%' AND MOD($check,2)=0 AND `function` LIKE '%" . $function . "%' 
+    $query = "SELECT * FROM history WHERE `roomId` LIKE '%" . $roomId . "%' AND MOD(SUBSTRING(`roomId`,LENGTH(`roomId`),1),2)=0 AND `function` LIKE '%" . $function . "%' 
     AND `badgeCode` LIKE '%" . $badgeCode . "%' 
     AND (`accessDate` BETWEEN '" . $startDate . "' AND '" . $endDate . "')
     AND `verdict` LIKE '%" . $verdict . "%';";
