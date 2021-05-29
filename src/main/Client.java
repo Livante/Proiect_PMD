@@ -54,12 +54,10 @@ public class Client {
 			byte[] newData = new byte[availablePort[i].bytesAvailable()];
 			int numRead = availablePort[i].readBytes(newData, newData.length);
 			stringBuffer = new String(newData, 0, numRead);
-			System.out.println(stringBuffer);
-			System.out.println(stringBuffer.length());
+	
 			try {
 				if (stringBuffer.length() == 7) {
-					System.out.println(
-							"String buffer: " + stringBuffer.substring(1, 5) + " Sala: " + stringBuffer.charAt(0));
+					
 					switch (stringBuffer.charAt(0)) {
 
 					case '1':
@@ -96,18 +94,16 @@ public class Client {
 					}
 
 					boolean sendMsgBack = opTry.isAccessFlag();
-					System.out.println(opTry.isAccessFlag());
+		
 					byte buffer;
 					if (sendMsgBack == true) {
 						buffer = 1;
 						System.out.println("ACCESS GRANTED");
-						System.out.println("BUFFER: 1");
 						newData = new byte[availablePort[i].bytesAvailable()];
 						sendByteImmediately(buffer);
 					} else {
 						buffer = 2;
 						System.out.println("ACCESS DENIED");
-						System.out.println("BUFFER: 2");
 						newData = new byte[availablePort[i].bytesAvailable()];
 						sendByteImmediately(buffer);
 					}

@@ -43,9 +43,6 @@ public class Operation {
 				if (sala.equals(iterRoom.getRoomId())) {
 					badgeIdFromRoom = Integer.parseInt(iterRoom.getBadgeId());
 					if ((badgeIdFromRoom & badgeIdNum) > 0) {
-						System.out.println(badgeIdFromRoom);
-						System.out.println(badgeIdNum);
-						System.out.println(badgeIdFromRoom & badgeIdNum);
 						System.out.println("ACCESS GRANTED");
 						accessFlag = true;
 						History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, function, Integer.parseInt(badgeCode), Client.ACCESS_GRANTED);
@@ -62,7 +59,6 @@ public class Operation {
 		} else {
 			accessFlag = false;
 			function="Non existent";
-			System.out.println("\n\n\n\nAAAAAAICIIII"+sala+" "+function+" "+badgeCode+"\n\n\n\n");
 			History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, function, Integer.parseInt(badgeCode), Client.NON_EXISTENT_EMPLOYEE);
 		}
 
