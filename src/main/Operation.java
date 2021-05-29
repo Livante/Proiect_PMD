@@ -19,14 +19,14 @@ public class Operation {
 		return accessFlag;
 	}
 
-	public void doOperation(String badgeCode1, String sala) throws IOException, ClassNotFoundException, SQLException {
+	public void doOperation(String badgeCodeAndRoomNumber, String sala) throws IOException, ClassNotFoundException, SQLException {
 
 		boolean existingEmp = false;
 		accessFlag = false;
 
 		String function = "";
 		String badgeId = "";
-		String badgeCode = "" + badgeCode1;
+		String badgeCode = "" + badgeCodeAndRoomNumber;
 		for (Badge iterBadge : badgeList) {
 			if (iterBadge.getBadgeCode() == Integer.parseInt(badgeCode)) {
 				function = iterBadge.getFunction();
