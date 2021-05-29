@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PHP/historyEven.inc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PHP/historyOdd.inc.php" afterDir="false" />
+    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, trying to send&#10;manager code">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PHP/password-hist.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PHP/history.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/history.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WEB/password-hist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/WEB/password-hist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/History.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="DatabaseView">
@@ -49,19 +46,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../../../xampp/php" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1WAr6WOOT2klCGcosUMfvhhvrSw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-5.1.18-bin.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../xampp/php/php.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -77,6 +79,17 @@
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.Client" />
       <module name="Proiect_PMD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,6 +115,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -165,6 +179,19 @@
       <workItem from="1617457116195" duration="1767000" />
       <workItem from="1617458941606" duration="45000" />
       <workItem from="1617459307371" duration="4702000" />
+      <workItem from="1618174767689" duration="91000" />
+      <workItem from="1618174865957" duration="727000" />
+      <workItem from="1618175600297" duration="106000" />
+      <workItem from="1618207424438" duration="490000" />
+      <workItem from="1619540686212" duration="2853000" />
+      <workItem from="1619543551813" duration="1478000" />
+      <workItem from="1621957010433" duration="149000" />
+      <workItem from="1621957204195" duration="1801000" />
+      <workItem from="1622221832855" duration="854000" />
+      <workItem from="1622230694367" duration="7000" />
+      <workItem from="1622233737489" duration="5000" />
+      <workItem from="1622279251126" duration="9000" />
+      <workItem from="1622279271188" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -233,20 +260,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Trying sendByteImmediately" />
@@ -255,32 +281,9 @@
     <MESSAGE value="Updated Web pages, trying to send&#10;manager code" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated Web pages, trying to send&#10;manager code" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1617465210888">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1617465210888" />
-    <state x="-1336" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617455754300" />
-    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1617463225944">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1617463225944" />
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1617455759565">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617455759565" />
-    <state x="-1142" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617455395662">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1142" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617455395662" />
-    <state x="-1252" y="237" width="583" height="566" key="find.popup" timestamp="1617454175459">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1252" y="237" width="583" height="566" key="find.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617454175459" />
-    <state x="404" y="156" key="git4idea.merge.GitPullDialog" timestamp="1617456596086">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="404" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1617456596086" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Proiect_PMD$Client.ic" NAME="Client Coverage Results" MODIFIED="1616337811074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
