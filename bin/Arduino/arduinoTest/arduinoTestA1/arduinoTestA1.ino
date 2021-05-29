@@ -77,7 +77,7 @@ void initNum() {
 	lcd.begin();
 	lcd.backlight();
 	lcd.setCursor(0, 0);
-	lcd.print("ENTER THE CODE!");
+	lcd.print("Enter a code!");
 	lcd.setCursor(0, 1);
 }
 
@@ -93,18 +93,22 @@ int convertToInt(char key) {
 }
 
 void setLedState(){
-	if (password < 100) {
+	if (password < 10) {
 		lcd.setCursor(0, 1);
 		lcd.print("*");
 		RGB_color(125, 125, 125);
-	} else if (password < 1000) {
+	} else if (password < 100) {
 		lcd.setCursor(0, 1);
 		lcd.print("**");
 		RGB_color(0, 125, 125);
-	} else if (password < 10000) {
+	} else if (password < 1000) {
 		lcd.setCursor(0, 1);
 		lcd.print("***");
 		RGB_color(0, 0, 255);
+	} else if (password < 10000) {
+		lcd.setCursor(0, 1);
+		lcd.print("***");
+		RGB_color(0, 213, 255);
 	}
 }
 

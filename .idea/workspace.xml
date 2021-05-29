@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated Web pages, trying to send&#10;manager code">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="a3f70285-a499-4b66-bf6c-33f8ac742b2f" name="Default Changelist" comment="Updated manager and admin password check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/password-hist.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Arduino/arduinoTest/arduinoTestA1/arduinoTestA1.ino" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Arduino/arduinoTest/arduinoTestA1/arduinoTestA1.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Arduino/arduinoTest/arduinoTestA2/arduinoTestA2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Arduino/arduinoTest/arduinoTestA2/arduinoTestA2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/history.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/history.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/historyEven.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/historyEven.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PHP/historyOdd.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/historyOdd.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +40,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,17 +77,6 @@
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.Client" />
       <module name="Proiect_PMD" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,7 +178,9 @@
       <workItem from="1622230694367" duration="7000" />
       <workItem from="1622233737489" duration="5000" />
       <workItem from="1622279251126" duration="9000" />
-      <workItem from="1622279271188" duration="353000" />
+      <workItem from="1622279271188" duration="2095000" />
+      <workItem from="1622281389101" duration="1806000" />
+      <workItem from="1622283205503" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="Trying sendByteImmediately">
       <created>1613826002822</created>
@@ -256,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617455755627</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated manager and admin password check">
+      <created>1622279796936</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622279796936</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +275,8 @@
     <MESSAGE value="Preparing to connect 2 relays" />
     <MESSAGE value="Updated Web pages, reimplemented Employee&#10;add/removal so it works properly with the new &#10;database configuration" />
     <MESSAGE value="Updated Web pages, trying to send&#10;manager code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Web pages, trying to send&#10;manager code" />
+    <MESSAGE value="Updated manager and admin password check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated manager and admin password check" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
