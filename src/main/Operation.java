@@ -19,7 +19,7 @@ public class Operation {
 		return accessFlag;
 	}
 
-	public void doOperation(String badgeCodeAndRoomNumber, String sala) throws IOException, ClassNotFoundException, SQLException {
+	public void doOperation(String badgeCodeAndRoomNumber, String meetingRoom) throws IOException, ClassNotFoundException, SQLException {
 
 		boolean existingEmp = false;
 		accessFlag = false;
@@ -40,12 +40,12 @@ public class Operation {
 			int badgeIdNum = Integer.parseInt(badgeId);
 
 			for (Room iterRoom : roomList) {
-				if (sala.equals(iterRoom.getRoomId())) {
+				if (meetingRoom.equals(iterRoom.getRoomId())) {
 					badgeIdFromRoom = Integer.parseInt(iterRoom.getBadgeId());
 					if ((badgeIdFromRoom & badgeIdNum) > 0) {
 						System.out.println("ACCESS GRANTED");
 						accessFlag = true;
-						History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, function, Integer.parseInt(badgeCode), Client.ACCESS_GRANTED);
+						History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", meetingRoom, function, Integer.parseInt(badgeCode), Client.ACCESS_GRANTED);
 						break;
 					}
 				}
@@ -54,12 +54,12 @@ public class Operation {
 			if (!accessFlag) {
 				accessFlag = false;
 				System.out.println("ACCESS DENIED");
-				History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, function, Integer.parseInt(badgeCode), Client.ACCESS_DENIED);
+				History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", meetingRoom, function, Integer.parseInt(badgeCode), Client.ACCESS_DENIED);
 			}
 		} else {
 			accessFlag = false;
 			function="Non existent";
-			History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", sala, function, Integer.parseInt(badgeCode), Client.NON_EXISTENT_EMPLOYEE);
+			History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", meetingRoom, function, Integer.parseInt(badgeCode), Client.NON_EXISTENT_EMPLOYEE);
 		}
 
 	}

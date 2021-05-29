@@ -12,14 +12,14 @@ public class Client {
 
 	public final static int MAX_PORTS = 8;
 
-	public static final String SALA_A1 = "A1";
-	public static final String SALA_A2 = "A2";
-	public static final String SALA_A3 = "A3";
-	public static final String SALA_A4 = "A4";
-	public static final String SALA_A5 = "A5";
-	public static final String SALA_A6 = "A6";
-	public static final String SALA_A7 = "A7";
-	public static final String SALA_A8 = "A8";
+	public static final String ROOM_A1 = "A1";
+	public static final String ROOM_A2 = "A2";
+	public static final String ROOM_A3 = "A3";
+	public static final String ROOM_A4 = "A4";
+	public static final String ROOM_A5 = "A5";
+	public static final String ROOM_A6 = "A6";
+	public static final String ROOM_A7 = "A7";
+	public static final String ROOM_A8 = "A8";
 
 	public static final String NON_EXISTENT_EMPLOYEE = "Non existent employee";
 	public static final String ACCESS_GRANTED = "Access Granted";
@@ -61,35 +61,35 @@ public class Client {
 					switch (stringBuffer.charAt(0)) {
 
 					case '1':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A1);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A1);
 						break;
 
 					case '2':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A2);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A2);
 						break;
 
 					case '3':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A3);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A3);
 						break;
 
 					case '4':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A4);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A4);
 						break;
 
 					case '5':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A5);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A5);
 						break;
 
 					case '6':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A6);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A6);
 						break;
 
 					case '7':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A7);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A7);
 						break;
 
 					case '8':
-						opTry.doOperation(stringBuffer.substring(1, 5), SALA_A8);
+						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A8);
 						break;
 					}
 
