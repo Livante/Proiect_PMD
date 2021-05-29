@@ -37,7 +37,8 @@ public class Badge {
 		this.badgeCode = badgeCode;
 	}
 	
-	public static void connectToDatabase(Operation op, String database) throws ClassNotFoundException, SQLException, IOException {
+	public static void connectToDatabase(Operation op, String database) 
+			throws ClassNotFoundException, SQLException, IOException {
 		if (database.contains("badge")) {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn = null;

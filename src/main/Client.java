@@ -139,7 +139,9 @@ public class Client {
 		} catch (Throwable e) {
 			try {
 				Thread.sleep(1000);
-			} catch (InterruptedException e1) {}
+			} catch (InterruptedException e1){
+				
+			}
 		}
 	}
 

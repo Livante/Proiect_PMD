@@ -78,7 +78,8 @@ public class History {
 		}
 	}
 
-	public static void writeInDb(Operation op, String database, String roomId, String function, int badgeCode, String verdict) {
+	public static void writeInDb(Operation op, String database, String roomId, 
+			String function, int badgeCode, String verdict) {
 		try {			
 		if (database.contains("history")) {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -87,10 +88,11 @@ public class History {
             Statement st = conn.createStatement(); 
             Date utilDate = new Date();
             Timestamp sqlTS = new Timestamp(utilDate.getTime());
-            System.out.println(sqlTS);
-            st.executeUpdate("INSERT INTO history (roomId,function,badgeCode,accessDate,verdict) " + 
-                "VALUES (\'"+roomId+"\',\'"+function+"\',"+badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')");
-            st.executeUpdate("Delete from history where TIMESTAMPADD(year,2,accessDate) < CURRENT_TIMESTAMP");
+            st.executeUpdate("INSERT INTO history (roomId,function,badgeCode,"+
+            		"accessDate,verdict) VALUES (\'"+roomId+"\',\'"+function+"\',"+
+            	badgeCode+",\'"+sqlTS+"\',\'"+verdict+"\')");
+            st.executeUpdate("Delete from history where TIMESTAMPADD(year,2,accessDate)"+
+            	" < CURRENT_TIMESTAMP");
             conn.close(); 
 		}
 		
