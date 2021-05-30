@@ -82,14 +82,16 @@ void initNum() {
 }
 
 int convertToInt(char key) {
-	if (key == '*') {
+	if (key == '*')
+        {
 		return 10;
 	}
-	if (key == '#') {
-		initNum();
+	if (key == '#') 
+        {
+		initNum(); //Initializare numar
 		return 1;
 	}
-	return char(key) - 48;
+	return char(key) - 48; //cast la char
 }
 
 void setLedState(){

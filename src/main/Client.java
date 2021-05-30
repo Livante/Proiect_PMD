@@ -12,14 +12,16 @@ public class Client {
 
 	public final static int MAX_PORTS = 8;
 
-	public static final String ROOM_A1 = "A1";
-	public static final String ROOM_A2 = "A2";
-	public static final String ROOM_A3 = "A3";
-	public static final String ROOM_A4 = "A4";
-	public static final String ROOM_A5 = "A5";
-	public static final String ROOM_A6 = "A6";
-	public static final String ROOM_A7 = "A7";
-	public static final String ROOM_A8 = "A8";
+	public static final String ROOM_NAMES[]= {
+			"A1",
+			"A2",
+			"A3",
+			"A4",
+			"A5",
+			"A6",
+			"A7",
+			"A8"
+			};
 
 	public static final String NON_EXISTENT_EMPLOYEE = "Non existent employee";
 	public static final String ACCESS_GRANTED = "Access Granted";
@@ -57,41 +59,9 @@ public class Client {
 	
 			try {
 				if (stringBuffer.length() == 7) {
-					
-					switch (stringBuffer.charAt(0)) {
-
-					case '1':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A1);
-						break;
-
-					case '2':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A2);
-						break;
-
-					case '3':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A3);
-						break;
-
-					case '4':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A4);
-						break;
-
-					case '5':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A5);
-						break;
-
-					case '6':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A6);
-						break;
-
-					case '7':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A7);
-						break;
-
-					case '8':
-						opTry.doOperation(stringBuffer.substring(1, 5), ROOM_A8);
-						break;
-					}
+					String roomVerifier=""+stringBuffer.charAt(0);
+					System.out.println("ROOMVERIFIER"+roomVerifier);
+					opTry.doOperation(stringBuffer.substring(1, 5), ROOM_NAMES[Integer.parseInt(roomVerifier)]);
 
 					boolean sendMsgBack = opTry.isAccessFlag();
 		
@@ -119,23 +89,29 @@ public class Client {
 
 	public static void main(String[] args) {
 		try {
+			
 			connectionForDatabases(opTry, "jdbc:mysql://localhost/badge");
 			connectionForDatabases(opTry, "jdbc:mysql://localhost/room");
 			connectionForDatabases(opTry, "jdbc:mysql://localhost/history");
 
 			for (int portIndex = 0; portIndex < MAX_PORTS; portIndex++) {
+				
 				availablePort[portIndex] = SerialPort.getCommPorts()[portIndex];
 				availablePort[portIndex].openPort();
 				System.out.println("COM port open: " + availablePort[portIndex].getDescriptivePortName());
+				
 				listenerList.add(new DataListener());
 				availablePort[portIndex].addDataListener(listenerList.get(portIndex));
 				System.out.println("Event Listener open.");
 			}
 
 		} catch (Throwable e) {
+			
 			try {
+				
 				Thread.sleep(1000);
-			} catch (InterruptedException e1){
+				
+			} catch (InterruptedException e1){	
 				
 			}
 		}
@@ -167,21 +143,19 @@ public class Client {
 	}
 
 	public static void populateRoomList(Operation op, ResultSet rs) throws SQLException {
-
+		
 		String roomId;
 		String badgeId;
-
+		
 		while (rs.next()) {
 			roomId = rs.getString(1);
 			badgeId = rs.getString(2);
-
 			Room roomObject = new Room(roomId, badgeId);
 			op.roomList.add(roomObject);
 		}
 	}
 
 	public static void populateHistoryList(Operation op, ResultSet rs) throws SQLException {
-
 		String roomId;
 		String function;
 		int badgeCode;
@@ -190,12 +164,13 @@ public class Client {
 
 		op.historyList= new ArrayList<History>();
 		while (rs.next()) {
+			
 			roomId = rs.getString(2);
 			function = rs.getString(3);
 			badgeCode = rs.getInt(4);
 			accessDate = rs.getDate(5);
 			verdict = rs.getString(6);
-
+			
 			History historyObject = new History(roomId, function, badgeCode, accessDate, verdict);
 			op.historyList.add(historyObject);
 		}
