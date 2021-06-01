@@ -59,8 +59,9 @@ public class Client {
 	
 			try {
 				if (stringBuffer.length() == 7) {
+					
 					String roomVerifier=""+stringBuffer.charAt(0);
-					System.out.println("ROOMVERIFIER"+roomVerifier);
+					
 					opTry.doOperation(stringBuffer.substring(1, 5), ROOM_NAMES[Integer.parseInt(roomVerifier)]);
 
 					boolean sendMsgBack = opTry.isAccessFlag();
@@ -69,14 +70,14 @@ public class Client {
 					if (sendMsgBack == true) {
 						buffer = 1;
 						System.out.println("ACCESS GRANTED");
-						newData = new byte[availablePort[i].bytesAvailable()];
-						sendByteImmediately(buffer);
+						
 					} else {
 						buffer = 2;
 						System.out.println("ACCESS DENIED");
-						newData = new byte[availablePort[i].bytesAvailable()];
-						sendByteImmediately(buffer);
 					}
+					
+					newData = new byte[availablePort[i].bytesAvailable()];
+					sendByteImmediately(buffer);
 
 				}
 			} catch (ClassNotFoundException | IOException | SQLException e) {
@@ -127,29 +128,35 @@ public class Client {
 	}
 
 	public static void populateBadgeList(Operation op, ResultSet rs) throws SQLException {
+		
 		String badgeId;
 		String function;
 		int badgeCode;
 
 		while (rs.next()) {
+		
 			badgeId = rs.getString(1);
 			function = rs.getString(2);
 			badgeCode = rs.getInt(3);
 
 			Badge badgeObject = new Badge(badgeId, function, badgeCode);
+			
 			op.badgeList.add(badgeObject);
 
 		}
 	}
 
-	public static void populateRoomList(Operation op, ResultSet rs) throws SQLException {
+	public static void populateRoomList(Operation op, ResultSet rs) 
+		throws SQLException {
 		
 		String roomId;
 		String badgeId;
 		
 		while (rs.next()) {
+			
 			roomId = rs.getString(1);
 			badgeId = rs.getString(2);
+			
 			Room roomObject = new Room(roomId, badgeId);
 			op.roomList.add(roomObject);
 		}
