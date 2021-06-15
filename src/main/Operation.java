@@ -43,7 +43,6 @@ public class Operation {
 				if (meetingRoom.equals(iterRoom.getRoomId())) {
 					badgeIdFromRoom = Integer.parseInt(iterRoom.getBadgeId());
 					if ((badgeIdFromRoom & badgeIdNum) > 0) {
-						System.out.println("ACCESS GRANTED");
 						accessFlag = true;
 						History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", meetingRoom, function, Integer.parseInt(badgeCode), Client.ACCESS_GRANTED);
 						break;
@@ -53,7 +52,6 @@ public class Operation {
 
 			if (!accessFlag) {
 				accessFlag = false;
-				System.out.println("ACCESS DENIED");
 				History.writeInDb(Client.opTry, "jdbc:mysql://localhost/history", meetingRoom, function, Integer.parseInt(badgeCode), Client.ACCESS_DENIED);
 			}
 		} else {

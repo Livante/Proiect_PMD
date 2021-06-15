@@ -39,6 +39,8 @@ void setup() {
 	lcd.backlight();
 	lcd.print("Enter a code:");
 	incomingByte = Serial.read();
+
+        RGB_color(255,255,255);
 }
 
 void loop() {
@@ -58,11 +60,11 @@ void loop() {
 			controlYala(3);
                         initNum();
 		}
-		setLedState();
                 keyNum = convertToInt(key);
          if(key!='#')
 		password = password * 10 + keyNum;
-		Serial.println(password);		
+		Serial.println(password);
+            setLedState();		
 	}
 }
 void RGB_color(int red_light_value, int green_light_value,
@@ -82,34 +84,42 @@ void initNum() {
 }
 
 int convertToInt(char key) {
-	if (key == '*') {
+	if (key == '*')
+        {
 		return 10;
 	}
-	if (key == '#') {
-		initNum();
+	if (key == '#') 
+        {
+		initNum(); //Initializare numar
 		return 1;
 	}
-	return char(key) - 48;
+	return char(key) - 48; //cast la char
 }
 
 void setLedState(){
+  
+        
 	if (password < 10) {
 		lcd.setCursor(0, 1);
 		lcd.print("*");
-		RGB_color(125, 125, 125);
+		RGB_color(0,0,0);
 	} else if (password < 100) {
 		lcd.setCursor(0, 1);
 		lcd.print("**");
-		RGB_color(0, 125, 125);
+		RGB_color(0,0,0);
 	} else if (password < 1000) {
 		lcd.setCursor(0, 1);
 		lcd.print("***");
-		RGB_color(0, 0, 255);
+		RGB_color(0,0,0);
 	} else if (password < 10000) {
 		lcd.setCursor(0, 1);
 		lcd.print("***");
-		RGB_color(0, 213, 255);
+		RGB_color(0,0,0);
 	}
+
+        if (password == NUMAR_SALA){
+                RGB_color(255,255,255);
+        }
 }
 
 void controlYala(int grantedOrDenied){
@@ -120,7 +130,6 @@ void controlYala(int grantedOrDenied){
 		lcd.setCursor(0, 0);
 		lcd.print("ACCESS GRANTED!");
 		digitalWrite(relay2, LOW);
-		lcd.print(incomingByte);
 		delay(3000);
 		digitalWrite(relay2, HIGH);
 	}
@@ -131,7 +140,6 @@ void controlYala(int grantedOrDenied){
 		lcd.setCursor(0, 0);
 		lcd.print("ACCESS DENIED!");
 		digitalWrite(relay2, HIGH);
-		lcd.print(incomingByte);
 		delay(3000);
 		digitalWrite(relay2, HIGH);
 	}
@@ -145,3 +153,4 @@ void controlYala(int grantedOrDenied){
 		initNum();
 	}
 }
+
